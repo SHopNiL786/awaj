@@ -1,5 +1,5 @@
-$color: #000;
+// Not everything is loaded from roolith, only loaded things we need see _roolith.scss
+// see roolith-settings for roolith related settings
+@import "roolith";
 
-body {
-color: $color;
-}
+@import "settings";
