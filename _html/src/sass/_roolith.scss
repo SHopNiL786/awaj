@@ -36,7 +36,7 @@
 @include roolith-reset();
 @include roolith-base();
 @include roolith-typography();
-@include roolith-animation();
+// @include roolith-animation();
 @if($grid-layout == css-grid) {
     @include roolith-css-grid();
 }

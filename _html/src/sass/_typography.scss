@@ -1,0 +1,39 @@
+h1, h2, h3, h4, h5, h6 {
+    font-weight: $font-weight-bold;
+}
+
+h1 {
+    font-size: rem(60);
+    line-height: rem(60);
+    letter-spacing: rem(-2);
+}
+
+h2 {
+    font-size: rem(42);
+    line-height: rem(46);
+    letter-spacing: rem(-2);
+}
+
+h3 {
+    font-size: rem(36);
+    line-height: rem(42);
+    letter-spacing: rem(-2);
+}
+
+h4 {
+    font-size: rem(28);
+    line-height: rem(32);
+    letter-spacing: rem(-1);
+}
+
+h5 {
+    font-size: rem(22);
+    line-height: rem(26);
+    letter-spacing: rem(-1);
+}
+
+h6 {
+    font-size: rem(18);
+    line-height: rem(22);
+    letter-spacing: rem(-1);
+}

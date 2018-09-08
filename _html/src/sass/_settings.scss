@@ -1,0 +1,12 @@
+$color-primary    : map-get($colors, primary);
+$color-secondary  : map-get($colors, secondary);
+$color-black      : map-get($colors, dark);
+$color-info       : map-get($colors, info);
+$color-error      : map-get($colors, error);
+$color-success    : map-get($colors, success);
+$color-light-grey : #F0F0F0;
+$color-dark-grey  : #D1D3D3;
+$color-light      : #F6F9FC;
+
+$font-weight-normal: 400;
+$font-weight-bold: 700;

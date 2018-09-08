@@ -3,3 +3,16 @@
 @import "roolith";
 
 @import "settings";
+
+@import "base";
+@import "typography";
+
+
+.module {
+    padding: 20px;
+    background: #ddd;
+}
+
+.module__body {
+    padding: 20px;
+}
