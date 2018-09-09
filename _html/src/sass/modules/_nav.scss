@@ -38,3 +38,25 @@
     top: rem(-4);
     margin-left: rem(10);
 }
+
+.nav__footer {
+    ul {
+
+        li {
+            padding-bottom: rem(8);
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+
+            a {
+                font-size: rem(14);
+                line-height: rem(22);
+
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
