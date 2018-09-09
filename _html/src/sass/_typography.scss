@@ -1,39 +1,101 @@
+.theme--dark {
+    color: $color-white;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-weight: $font-weight-bold;
 }
 
-h1 {
+h1, .h1 {
     font-size: rem(60);
     line-height: rem(60);
     letter-spacing: rem(-2);
 }
 
-h2 {
+h2, .h2 {
     font-size: rem(42);
     line-height: rem(46);
     letter-spacing: rem(-2);
 }
 
-h3 {
+h3, .h3 {
     font-size: rem(36);
     line-height: rem(42);
     letter-spacing: rem(-2);
 }
 
-h4 {
+h4, .h4 {
     font-size: rem(28);
     line-height: rem(32);
     letter-spacing: rem(-1);
 }
 
-h5 {
+h5, .h5 {
     font-size: rem(22);
     line-height: rem(26);
     letter-spacing: rem(-1);
 }
 
-h6 {
+h6, .h6 {
     font-size: rem(18);
     line-height: rem(22);
     letter-spacing: rem(-1);
+}
+
+.text__primary {
+    font-size: rem(16);
+    line-height: rem(28);
+}
+
+p, .text__secondary {
+    font-size: rem(14);
+    line-height: rem(26);
+}
+
+.text__tertiary {
+    font-size: rem(14);
+    line-height: rem(22);
+}
+
+.text__small, small {
+    font-size: rem(12);
+    line-height: rem(18);
+}
+
+.text__dimmed {
+    opacity: 0.5;
+}
+
+a {
+    display: inline-block;
+    color: $color-primary;
+    position: relative;
+    @include transition('color');
+
+    .theme--dark & {
+        color: $color-secondary;
+    }
+
+    &:after {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        content: "";
+        width: 100%;
+        height: rem(1);
+        background-color: $color-secondary;
+        @include transition('background');
+    }
+
+    .theme--dark &:after {
+        background-color: darken($color-secondary, 10%);
+    }
+
+    &:hover {
+        color: $color-secondary;
+
+        &:after {
+            background: transparent;
+        }
+    }
 }

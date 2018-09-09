@@ -1,0 +1,28 @@
+input[type=search]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=search]::-ms-reveal {  display: none; width : 0; height: 0; }
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+
+::placeholder {
+    color: $color-dark-grey;
+}
+
+input, textarea, select {
+    font-family: $global-font-family;
+    font-size: rem(14);
+    -webkit-border-radius: 0;
+    outline: none;
+}
+
+.form__input {
+    width: 100%;
+    border: rem(1) solid rgba($color-dark-grey, 0.5);
+    border-radius: $global-border-radius;
+    padding: rem(9) rem(12);
+    box-shadow: none;
+    @include transition('border, box-shadow, background');
+}

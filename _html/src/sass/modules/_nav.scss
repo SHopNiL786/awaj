@@ -1,0 +1,40 @@
+.nav__wrapper {
+    @include clearfix();
+
+    .nav {
+        float: left;
+    }
+
+    .nav__search {
+        float: left;
+    }
+}
+
+.nav-link {
+    font-weight: $font-weight-bold;
+    letter-spacing: rem(-0.5);
+
+    &:after {
+        display: none;
+    }
+
+    &:hover {
+        color: $color-secondary;
+    }
+}
+
+.nav {
+    li {
+        @extend .nav-item;
+
+        a {
+            @extend .nav-link;
+        }
+    }
+}
+
+.nav__search {
+    position: relative;
+    top: rem(-4);
+    margin-left: rem(10);
+}
