@@ -1,0 +1,79 @@
+$button-large-size: rem(45);
+$button-small-size: rem(35);
+
+.button {
+    height: $button-large-size;
+    line-height: $button-large-size;
+    border-radius: $global-border-radius;
+    display: inline-block;
+    font-family: $global-font-family;
+    letter-spacing: rem(-1);
+    text-decoration: none;
+    cursor: pointer;
+    background-color: $color-dark-grey;
+    border: rem(1) solid $color-dark-grey;
+    color: $color-black;
+    font-size: rem(16);
+    min-width: rem(60);
+    padding: 0 rem(40);
+    position: relative;
+    @include transition('background');
+}
+
+.button--small {
+    height: $button-small-size;
+    line-height: $button-small-size;
+    font-size: rem(14);
+    padding: 0 rem(25);
+}
+
+.button--rounded {
+    border-radius: rem(25);
+    line-height: $button-large-size - rem(1);
+
+    &.button--small {
+        line-height: $button-small-size - rem(1);
+    }
+}
+
+.button__primary {
+    background-color: $color-primary;
+    border: rem(1) solid $color-primary;
+    color: $color-white;
+
+    &:hover {
+        background-color: lighten($color-primary, 10%);
+        border-color: lighten($color-primary, 10%);
+    }
+}
+
+.button__secondary {
+    background-color: $color-black;
+    border: rem(1) solid $color-black;
+    color: $color-white;
+
+    &:hover {
+        background-color: lighten($color-black, 10%);
+        border-color: lighten($color-black, 10%);
+    }
+}
+
+.button__primary__outline {
+    background-color: transparent;
+    border: rem(1) solid $color-primary;
+    color: $color-primary;
+
+    &:hover {
+        background-color: lighten($color-primary, 60%);
+    }
+}
+
+.button__secondary__outline {
+    background-color: transparent;
+    border: rem(1) solid $color-black;
+    color: $color-black;
+
+    &:hover {
+        background-color: lighten($color-black, 80%);
+    }
+}

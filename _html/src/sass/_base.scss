@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,700');
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: $global-font-family;
     font-weight: $font-weight-normal;
     color: $color-black;
 }

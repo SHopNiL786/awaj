@@ -6,8 +6,10 @@
 
 @import "base";
 @import "typography";
+@import "./modules/button";
 
 
+// For demo
 .module {
     padding: 20px;
     background: #ddd;
