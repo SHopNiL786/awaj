@@ -1,0 +1,24 @@
+.content__primary {
+    padding: rem(70) 0;
+
+    &.theme--dark {
+        background-color: $color-primary;
+    }
+}
+
+.content__primary__hl {
+    padding-bottom: rem(5);
+}
+
+.content__primary__subhl {
+    @extend .h6__native;
+}
+
+.content__primary__text {
+    padding-bottom: rem(55);
+    @extend .text__large;
+}
+
+.content__primary__button {
+
+}
