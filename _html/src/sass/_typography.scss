@@ -42,6 +42,19 @@ h6, .h6 {
     letter-spacing: rem(-1);
 }
 
+.h6__native {
+    font-weight: $font-weight-normal;
+    font-size: rem(18);
+    line-height: rem(22);
+    letter-spacing: rem(-1);
+    text-transform: uppercase;
+}
+
+.text__large {
+    font-size: rem(18);
+    line-height: rem(32);
+}
+
 .text__primary {
     font-size: rem(16);
     line-height: rem(28);

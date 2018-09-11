@@ -3,7 +3,7 @@ $button-small-size: rem(35);
 
 .button {
     height: $button-large-size;
-    line-height: $button-large-size;
+    line-height: $button-large-size - rem(1);
     border-radius: $global-border-radius;
     display: inline-block;
     font-family: $global-font-family;
@@ -22,7 +22,7 @@ $button-small-size: rem(35);
 
 .button--small {
     height: $button-small-size;
-    line-height: $button-small-size;
+    line-height: $button-small-size - rem(1);
     font-size: rem(14);
     padding: 0 rem(25);
 }
