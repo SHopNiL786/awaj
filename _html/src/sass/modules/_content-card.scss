@@ -1,14 +1,21 @@
-$content__card-item-height: 203;
+$content-card-item-height: 203;
+
+.content__card {
+    padding: rem(62) 0 rem(50) 0;
+}
+
+.content__card__header {
+    @include clearfix();
+}
 
 .content__card__hl {
-    display: inline-block;
-    padding-top: rem(40);
+    float: left;
     padding-bottom: rem(30);
 }
 
 .content__card__hl__link {
     float: right;
-    margin-top: rem(62);
+    margin-top: rem(10);
 }
 
 .content__card__item {
@@ -16,7 +23,7 @@ $content__card-item-height: 203;
     margin-bottom: rem(20);
     border-radius: $global-border-radius;
     overflow: hidden;
-    height: rem($content__card-item-height);
+    height: rem($content-card-item-height);
     background: #ddd;
     width: 100%;
     position: relative;
@@ -27,10 +34,11 @@ $content__card-item-height: 203;
 }
 
 .content__card__item--large {
-    height: rem(($content__card-item-height * 2) + 20);
+    height: rem(($content-card-item-height * 2) + 22);
 }
 
 .content__card__item__body {
+    width: 100%;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -43,6 +51,8 @@ $content__card-item-height: 203;
 }
 
 .content__card__item__hl {
+    padding-top: rem(5);
+
     .content__card__item--large & {
         @extend .h5;
     }
