@@ -91,3 +91,8 @@ a.button__secondary__outline {
         background-color: lighten($color-black, 85%);
     }
 }
+
+.button__link {
+    font-size: rem(14);
+    line-height: rem(26);
+}

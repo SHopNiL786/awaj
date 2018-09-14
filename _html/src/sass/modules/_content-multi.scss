@@ -1,0 +1,26 @@
+.content__multi__col {
+    padding: rem(65) 0 rem(70);
+    background: $color-light;
+}
+
+.content__multi__col__header__hl {
+    @extend .h6__native;
+    color: $color-primary;
+    padding-bottom: rem(7);
+}
+
+.content__multi__col__header__text {
+    @extend .text__primary;
+    padding-bottom: rem(40);
+}
+
+.content__multi__col__body__detail {
+    padding: rem(5) 0 0;
+}
+
+.content__multi__col__body__detail__text {
+    padding-bottom: rem(25);
+    min-height: rem(130);
+
+    @extend .text__secondary;
+}
