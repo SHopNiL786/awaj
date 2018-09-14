@@ -1,0 +1,27 @@
+.header {
+    padding: rem(35) 0 rem(25);
+}
+
+.header__logo {
+    span {
+        display: none;
+    }
+
+    a {
+        display: inline-block;
+        width: rem(150);
+
+        &:after {
+            display: none;
+        }
+    }
+
+    svg {
+        width: 100%;
+    }
+}
+
+.header__nav {
+    padding-top: rem(10);
+    float: right;
+}
