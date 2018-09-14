@@ -1,5 +1,5 @@
 .content__primary {
-    padding: rem(70) 0;
+    padding: rem(65) 0 rem(70);
 
     &.theme--dark {
         background-color: $color-primary;
@@ -7,15 +7,17 @@
 }
 
 .content__primary__hl {
-    padding-bottom: rem(5);
+    padding-bottom: rem(15);
 }
 
 .content__primary__subhl {
     @extend .h6__native;
+    color: $color-secondary;
+    padding-bottom: rem(13);
 }
 
 .content__primary__text {
-    padding-bottom: rem(55);
+    padding-bottom: rem(50);
     @extend .text__large;
 }
 

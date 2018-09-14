@@ -1,7 +1,9 @@
 $button-large-size: rem(45);
 $button-small-size: rem(35);
 
-.button {
+.button,
+a.button {
+    display: inline-block;
     height: $button-large-size;
     line-height: $button-large-size - rem(1);
     border-radius: $global-border-radius;
@@ -20,23 +22,32 @@ $button-small-size: rem(35);
     @include transition('background');
 }
 
-.button--small {
+a.button {
+    &:after {
+        display: none;
+    }
+}
+
+.button--small,
+a.button--small {
     height: $button-small-size;
     line-height: $button-small-size - rem(1);
     font-size: rem(14);
     padding: 0 rem(25);
 }
 
-.button--rounded {
+.button--rounded,
+a.button--rounded {
     border-radius: rem(25);
-    line-height: $button-large-size - rem(1);
+    line-height: $button-large-size - rem(2);
 
     &.button--small {
-        line-height: $button-small-size - rem(1);
+        line-height: $button-small-size - rem(2);
     }
 }
 
-.button__primary {
+.button__primary,
+a.button__primary {
     background-color: $color-primary;
     border: rem(1) solid $color-primary;
     color: $color-white;
@@ -47,7 +58,8 @@ $button-small-size: rem(35);
     }
 }
 
-.button__secondary {
+.button__secondary,
+a.button__secondary {
     background-color: $color-black;
     border: rem(1) solid $color-black;
     color: $color-white;
@@ -58,7 +70,8 @@ $button-small-size: rem(35);
     }
 }
 
-.button__primary__outline {
+.button__primary__outline,
+a.button__primary__outline {
     background-color: transparent;
     border: rem(1) solid $color-primary;
     color: $color-primary;
@@ -68,7 +81,8 @@ $button-small-size: rem(35);
     }
 }
 
-.button__secondary__outline {
+.button__secondary__outline,
+a.button__secondary__outline {
     background-color: transparent;
     border: rem(1) solid $color-black;
     color: $color-black;
