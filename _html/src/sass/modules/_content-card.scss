@@ -76,15 +76,18 @@ $content__card-item-height: 203;
     padding-top: rem(45);
 }
 
-.content__multi__col__hl {
+.content__multi__col__header__hl {
     color: $color-primary;
 }
 
-.content__multi__col__text {
+.content__multi__col__header__text {
     padding-bottom: rem(45);
 }
 
-.content__card__texts {
+.content__multi__col__body__detail__text {
     padding-bottom: rem(25);
     min-height: rem(130);
+
+    @extend .text__secondary;
 }
+
