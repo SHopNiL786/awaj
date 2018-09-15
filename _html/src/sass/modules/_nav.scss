@@ -23,6 +23,16 @@
     }
 }
 
+.theme--dark {
+    .nav-link {
+        color: $color-white;
+
+        &:hover {
+            color: $color-secondary;
+        }
+    }
+}
+
 .nav {
     li {
         @extend .nav-item;

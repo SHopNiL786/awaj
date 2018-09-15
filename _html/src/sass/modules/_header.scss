@@ -1,8 +1,18 @@
 .header {
-    padding: rem(35) 0 rem(25);
+    padding: rem(35) 0;
+
+    &.theme--dark {
+        background: $color-primary;
+    }
+}
+
+.header--compact {
+    padding: rem(17) 0;
 }
 
 .header__logo {
+    line-height: rem(45);
+
     span {
         display: none;
     }
@@ -19,9 +29,21 @@
     svg {
         width: 100%;
     }
+
+    .header--compact & {
+        line-height: rem(36);
+
+        a {
+            width: rem(108);
+        }
+    }
 }
 
 .header__nav {
-    padding-top: rem(10);
+    padding-top: rem(12);
     float: right;
+
+    .header--compact & {
+        padding-top: rem(7);
+    }
 }
