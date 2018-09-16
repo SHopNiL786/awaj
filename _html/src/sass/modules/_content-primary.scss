@@ -1,5 +1,9 @@
 .content__primary {
-    padding: rem(65) 0 rem(70);
+    padding: rem(35) 0 rem(40);
+
+    @include breakpoint(large-up) {
+        padding: rem(65) 0 rem(70);
+    }
 
     &.theme--dark {
         background-color: $color-primary;

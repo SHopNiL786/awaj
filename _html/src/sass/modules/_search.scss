@@ -1,7 +1,12 @@
 .search-form {
     position: relative;
-    display: inline-block;
-    width: rem(200);
+    display: block;
+    width: 100%;
+
+    @include breakpoint(large-up) {
+        display: inline-block;
+        width: rem(200);
+    }
 }
 
 .screen-reader-text {

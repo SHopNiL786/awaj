@@ -1,7 +1,7 @@
-class Example {
-init() {
-	console.log('Init');
-}
-}
+import { Header } from './modules/Header';
+import { Footer } from './modules/Footer';
 
-new Example().init();
+jQuery(document).ready(function($) {
+    new Header();
+    new Footer();
+});

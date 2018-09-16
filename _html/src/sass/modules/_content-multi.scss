@@ -1,6 +1,10 @@
 .content__multi__col {
-    padding: rem(65) 0 rem(70);
     background: $color-light;
+    padding: rem(35) 0 0;
+
+    @include breakpoint(large-up) {
+        padding: rem(65) 0 rem(70);
+    }
 }
 
 .content__multi__col__header__hl {
@@ -15,7 +19,11 @@
 }
 
 .content__multi__col__body__detail {
-    padding: rem(5) 0 0;
+    padding: rem(5) 0 rem(40);
+
+    @include breakpoint(large-up) {
+        padding: rem(5) 0 0;
+    }
 }
 
 .content__multi__col__body__detail__text {

@@ -1,25 +1,43 @@
 .header {
-    padding: rem(35) 0;
+    padding: rem(15) 0;
+    position: relative;
 
     &.theme--dark {
         background: $color-primary;
     }
+
+    @include breakpoint(large-up) {
+        padding: rem(35) 0;
+    }
 }
 
 .header--compact {
-    padding: rem(17) 0;
+    padding: rem(10) 0;
+
+    @include breakpoint(large-up) {
+        padding: rem(17) 0;
+    }
 }
 
 .header__logo {
+    float: left;
     line-height: rem(45);
 
-    span {
+    @include breakpoint(large-up) {
+        float: none;
+    }
+
+    > span {
         display: none;
     }
 
     a {
         display: inline-block;
-        width: rem(150);
+        width: rem(120);
+
+        @include breakpoint(large-up) {
+            width: rem(150);
+        }
 
         &:after {
             display: none;
@@ -40,10 +58,60 @@
 }
 
 .header__nav {
-    padding-top: rem(12);
-    float: right;
+    display: none;
+    margin-top: rem(20);
+    border-top: rem(1) solid $color-light;
+    padding: rem(20) 0 rem(10);
+
+    .theme--dark & {
+        border-color: $color-secondary;
+    }
+
+    &.is--active {
+        display: block;
+    }
+
+    @include breakpoint(large-up) {
+        display: block;
+        margin-top: 0;
+        border: none;
+        padding-top: rem(12);
+        padding-bottom: 0;
+        float: right;
+    }
 
     .header--compact & {
         padding-top: rem(7);
+    }
+}
+
+
+.header--fixed {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 rem(10) rem(30) 0 rgba($color-black, 0.2);
+    @include transition('transform', 400ms);
+}
+
+.header--hide {
+    transform: translateY(-150%);
+}
+
+
+.header__hamburger {
+    float: right;
+    padding-top: rem(13);
+
+    @include breakpoint(large-up) {
+        display: none;
+    }
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    .theme--dark & {
+        background-color: $color-white;
     }
 }

@@ -1,9 +1,23 @@
 $hero-size: rem(700);
 $hero-spacing: rem(70);
 
+$hero-size-small: rem(550);
+$hero-spacing-small: rem(30);
+
+$hero-size-medium: rem(400);
+$hero-spacing-medium: rem(30);
+
 .hero {
     position: relative;
-    height: $hero-size;
+    height: $hero-size-small;
+
+    @include breakpoint(medium-up) {
+        height: $hero-size-medium;
+    }
+
+    @include breakpoint(large-up) {
+        height: $hero-size;
+    }
 }
 
 .hero__img {
@@ -23,13 +37,25 @@ $hero-spacing: rem(70);
 .hero__body {
     position: relative;
     z-index: 1;
-    padding: $hero-spacing 0;
+    padding: $hero-spacing-small 0;
+
+    @include breakpoint(large-up) {
+        padding: $hero-spacing 0;
+    }
 }
 
 .hero__body__content {
-    height: $hero-size - ($hero-spacing * 2);
+    height: $hero-size-small - ($hero-spacing-small * 2);
     display: flex;
     align-items: center;
+
+    @include breakpoint(medium-up) {
+        height: $hero-size-medium - ($hero-spacing-medium * 2);
+    }
+
+    @include breakpoint(large-up) {
+        height: $hero-size - ($hero-spacing * 2);
+    }
 }
 
 .hero__subhl {
@@ -45,7 +71,11 @@ $hero-spacing: rem(70);
 .hero__main__img {
     margin-left: rem(-79);
     height: $hero-size - ($hero-spacing * 2);
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
+
+    @include breakpoint(large-up) {
+        display: flex;
+    }
 }

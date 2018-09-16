@@ -26,6 +26,7 @@
     "vinyl-source-stream": "^2.0.0"
   },
   "dependencies": {
+    "hamburgers": "^0.9.3",
     "roolith-css": "^1.5.0"
   }
 }

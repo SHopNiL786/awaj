@@ -14,3 +14,23 @@ $font-weight-bold: 700;
 
 $global-border-radius: rem(3);
 $global-font-family: 'Poppins', sans-serif;
+
+
+$hamburger-padding-x                       : rem(5) !default;
+$hamburger-padding-y                       : rem(5) !default;
+$hamburger-layer-width                     : rem(25) !default;
+$hamburger-layer-height                    : rem(3) !default;
+$hamburger-layer-spacing                   : rem(4) !default;
+$hamburger-layer-color                     : $color-primary !default;
+$hamburger-layer-border-radius             : $global-border-radius !default;
+$hamburger-hover-opacity                   : 0.7 !default;
+$hamburger-hover-transition-duration       : 0.15s !default;
+$hamburger-hover-transition-timing-function: linear !default;
+
+$hamburger-hover-use-filter: false !default;
+$hamburger-hover-filter    : opacity(50%) !default;
+
+$hamburger-types: (
+  slider,
+  slider-r
+) !default;
