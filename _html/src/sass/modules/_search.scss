@@ -34,15 +34,25 @@
     border-radius: 50%;
     width: rem(29);
     height: rem(29);
+    padding: 0;
+
     @include transition('background');
 
     svg {
-        width: 100%;
         fill: $color-white;
+        width: rem(18);
+        height: rem(18);
     }
 
     &:hover {
         background: lighten($color-primary, 15%);
         cursor: pointer;
+    }
+}
+
+@supports (-webkit-overflow-scrolling: touch) {
+    .search-submit {
+        top: rem(5);
+        right: rem(4);
     }
 }
