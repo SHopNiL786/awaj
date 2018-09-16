@@ -1,0 +1,51 @@
+$hero-size: rem(700);
+$hero-spacing: rem(70);
+
+.hero {
+    position: relative;
+    height: $hero-size;
+}
+
+.hero__img {
+    @include overlay();
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.hero__body {
+    position: relative;
+    z-index: 1;
+    padding: $hero-spacing 0;
+}
+
+.hero__body__content {
+    height: $hero-size - ($hero-spacing * 2);
+    display: flex;
+    align-items: center;
+}
+
+.hero__subhl {
+    @extend .h6__native;
+    color: $color-primary;
+    padding-bottom: rem(14);
+}
+
+.hero__hl {
+    padding-bottom: rem(55);
+}
+
+.hero__main__img {
+    margin-left: rem(-79);
+    height: $hero-size - ($hero-spacing * 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

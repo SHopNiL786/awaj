@@ -69,6 +69,15 @@
             }
         }
     }
+
+    .icon {
+        position: relative;
+        top: rem(3);
+
+        svg {
+            fill: $color-primary;
+        }
+    }
 }
 
 .nav__footer__hl {

@@ -1,0 +1,27 @@
+.footer {
+    padding: rem(70) 0;
+}
+
+.footer__claim {
+    padding-top: rem(70);
+}
+
+.footer__back-to-top {
+    @extend .text__secondary;
+    width: rem(32);
+
+    svg {
+        fill: $color-secondary;
+        @include transition('fill');
+    }
+
+    &:hover {
+        svg {
+            fill: $color-primary;
+        }
+    }
+
+    &:after {
+        display: none;
+    }
+}

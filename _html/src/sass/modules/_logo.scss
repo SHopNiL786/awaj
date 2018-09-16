@@ -1,0 +1,8 @@
+.logo {
+    display: inline-block;
+    width: rem(150);
+
+    &:after {
+        display: none;
+    }
+}

@@ -4,10 +4,12 @@
 
 @import "settings";
 
+@import "mixin";
 @import "base";
 @import "typography";
 @import "./modules/button";
 @import "./modules/form";
+@import "./modules/logo";
 @import "./modules/nav";
 @import "./modules/search";
 @import "./modules/content-primary";
@@ -15,6 +17,9 @@
 @import "./modules/content-multi";
 @import "./modules/header";
 @import "./modules/footer";
+@import "./modules/icon";
+@import "./modules/hero";
+@import "./modules/fancy-img";
 
 // For demo
 .module {

@@ -1,0 +1,42 @@
+$fancy-image-size: rem(350);
+$fancy-box-size: rem(100);
+
+.fancy__img {
+    position: relative;
+    height: $fancy-image-size;
+    width: $fancy-image-size;
+}
+
+.fancy__img__item {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.fancy__img__box {
+    position: absolute;
+    width: $fancy-box-size;
+    height: $fancy-box-size;
+
+    &.is--top-right {
+        right: - $fancy-box-size;
+        top: - $fancy-box-size;
+    }
+
+    &.is--top-left {
+        left: - $fancy-box-size;
+        top: - $fancy-box-size;
+    }
+
+    &.is--bottom-right {
+        right: - $fancy-box-size;
+        bottom: - $fancy-box-size;
+    }
+
+    &.is--bottom-left {
+        left: - $fancy-box-size;
+        bottom: - $fancy-box-size;
+    }
+}
