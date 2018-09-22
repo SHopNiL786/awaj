@@ -107,6 +107,14 @@
     }
 }
 
+.theme--dark .nav__footer ul li a {
+    color: $color-light;
+
+    &:hover {
+        color: $color-secondary;
+    }
+}
+
 .nav__footer__hl {
     color: $color-secondary;
     padding-bottom: rem(17);

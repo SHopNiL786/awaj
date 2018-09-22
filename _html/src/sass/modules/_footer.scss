@@ -1,6 +1,10 @@
 .footer {
     padding: rem(40) 0;
 
+    &.theme--dark {
+        background: $color-primary;
+    }
+
     @include breakpoint(large-up) {
         padding: rem(70) 0;
     }
@@ -36,5 +40,9 @@
 
     &:after {
         display: none;
+    }
+
+    .theme--dark &:hover svg {
+        fill: $color-light;
     }
 }

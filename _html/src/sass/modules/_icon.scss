@@ -4,5 +4,9 @@
 
     svg {
         width: 100%;
+
+        .theme--dark & {
+            fill: $color-white;
+        }
     }
 }
