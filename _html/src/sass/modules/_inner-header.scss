@@ -1,0 +1,23 @@
+/* Inner header light 
+**********************/
+
+.inner__header__light {
+    background-color: $color-light;
+}
+
+.inner__header__light__breadcrumb {
+    padding-top: rem(8);
+}
+
+.inner__header__light__text {
+    padding-top: rem(40);
+    padding-bottom: rem(27);
+}
+
+.inner__header__light__text__title {
+    padding-bottom: rem(10);
+}
+
+.inner__header__light__text__description {
+    padding-bottom: rem(10);
+}
