@@ -1,17 +1,31 @@
 .inner__header {
     background: $color-light;
-    padding: rem(14) 0 rem(48);
+    padding: rem(14) 0 rem(28);
+
+    @include breakpoint(large-up) {
+        padding: rem(14) 0 rem(48);
+    }
 }
 
 .inner__header__content {
     .inner__header--has__image & {
         position: relative;
         z-index: 2;
-        height: rem(500);
+        height: rem(300);
         margin-top: rem(-14);
         padding-top: rem(14);
-        margin-bottom: rem(-48);
-        padding-bottom: rem(48);
+        margin-bottom: rem(-28);
+        padding-bottom: rem(28);
+
+        @include breakpoint(medium-up) {
+            height: rem(400);
+        }
+
+        @include breakpoint(large-up) {
+            height: rem(500);
+            margin-bottom: rem(-48);
+            padding-bottom: rem(48);
+        }
     }
 }
 
@@ -67,7 +81,10 @@
 .inner__header__text {
     @extend .text__primary;
     padding-top: rem(10);
-    max-width: 70%;
+
+    @include breakpoint(large-up) {
+        max-width: 70%;
+    }
 }
 
 .inner__header--has__image {
