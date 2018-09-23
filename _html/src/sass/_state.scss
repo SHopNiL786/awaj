@@ -1,0 +1,21 @@
+.is--for-large {
+    @include breakpoint(small-only) {
+        display: none;
+    }
+
+    @include breakpoint(medium-only) {
+        display: none;
+    }
+}
+
+.is--for-medium {
+    @include breakpoint(small-only) {
+        display: none;
+    }
+}
+
+.is--for-small {
+    @include breakpoint(medium-up) {
+        display: none;
+    }
+}

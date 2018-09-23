@@ -1,6 +1,10 @@
 .card {
-    padding-bottom: rem(53);
+    padding-bottom: rem(33);
     @include clearfix();
+
+    @include breakpoint(large-up) {
+        padding-bottom: rem(53);
+    }
 }
 
 .card__fig {
@@ -61,5 +65,34 @@
 
     &:after {
         display: none;
+    }
+}
+
+.card__container {
+    background: $color-light;
+    padding: rem(35) 0 0;
+
+    @include breakpoint(large-up) {
+        padding: rem(65) 0 rem(30);
+    }
+}
+
+.card__container__hl {
+    padding-bottom: rem(30);
+    float: left;
+
+    @include breakpoint(large-up) {
+        padding-bottom: rem(40);
+    }
+}
+
+.card__container__link {
+    float: right;
+    margin-top: rem(12);
+    @extend .text__secondary;
+
+    &.is--for-small {
+        margin-bottom: rem(30);
+        float: none;
     }
 }
