@@ -1,0 +1,65 @@
+.card {
+    padding-bottom: rem(53);
+    @include clearfix();
+}
+
+.card__fig {
+    position: relative;
+    border-radius: $global-border-radius;
+    overflow: hidden;
+    display: block;
+
+    img {
+        max-width: 100%;
+        border-radius: $global-border-radius;
+        float: left;
+    }
+
+    &:before {
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color-primary, 0.7);
+        background-image: url('../../src/images/new-link.svg');
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        clear: both;
+        opacity: 0;
+        @include transition('opacity');
+    }
+
+    &:hover:before {
+        opacity: 1;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+.card__hl {
+    padding: rem(23) 0 rem(10);
+
+    a {
+        &:after {
+            display: none;
+        }
+    }
+}
+
+.card__text {
+    @extend .text__secondary;
+}
+
+.card__link {
+    display: block;
+
+    &:after {
+        display: none;
+    }
+}
