@@ -25,6 +25,7 @@
 @import "./modules/partner";
 @import "./modules/inner-header";
 @import "./modules/content-img";
+@import "./modules/article";
 
 // For demo
 .module {
@@ -34,4 +35,8 @@
 
 .module__body {
     padding: 20px;
+}
+
+.module__body__alternate {
+    padding: 0;
 }

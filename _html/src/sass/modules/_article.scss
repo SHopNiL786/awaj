@@ -1,0 +1,107 @@
+.article {
+    padding: rem(40) 0;
+    @extend .text__primary;
+
+    @include breakpoint(large-up) {
+        padding: rem(80) 0;
+    }
+
+    p {
+        @extend .text__primary;
+    }
+
+    ul {
+        @extend .list;
+        margin: rem(20) 0 rem(10) rem(20);
+
+        @include breakpoint(large-up) {
+            margin: rem(20) 0 rem(10) rem(70);
+        }
+
+        li {
+            @extend .text__primary;
+        }
+    }
+
+    img {
+        border-radius: $global-border-radius;
+        max-width: 100%;
+        height: auto !important;
+
+        &.size-large {
+            width: 100%;
+            max-width: none;
+            margin: rem(20) 0;
+            display: inherit;
+
+            @include breakpoint(large-up) {
+                width: 120%;
+                margin: rem(20) 0 rem(20) -10%;
+            }
+        }
+
+        &.aligncenter {
+            display: inherit;
+            margin: rem(20) auto;
+        }
+
+        &.alignright {
+            display: inherit;
+            margin: rem(20) auto;
+
+            @include breakpoint(large-up) {
+                float: right;
+                margin: rem(30) 0 rem(30) rem(-70);
+                transform: translateX(rem(100));
+            }
+        }
+
+        &.alignleft {
+            display: inherit;
+            margin: rem(20) auto;
+
+            @include breakpoint(large-up) {
+                float: left;
+                margin: rem(30) rem(-70) rem(30) 0;
+                transform: translateX(rem(-100));
+            }
+        }
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        padding: rem(30) 0 rem(20);
+    }
+
+    blockquote {
+        float: right;
+        margin: rem(30) 0;
+        max-width: rem(500);
+        border: none;
+        padding: rem(35);
+        background: $color-primary;
+        color: $color-light;
+        position: relative;
+
+        @include breakpoint(large-up) {
+            transform: translateX(30%);
+            margin: rem(30) 0 rem(30) rem(-100);
+        }
+
+        &:before {
+            content: "";
+            display: inline-block;
+            width: rem(72);
+            height: rem(72);
+            background: url('../../src/images/blockquote.svg');
+            background-size: cover;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0.2;
+        }
+
+        p {
+            padding-bottom: 0;
+        }
+    }
+}
