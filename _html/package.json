@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "hamburgers": "^0.9.3",
-    "roolith-css": "^1.5.0"
+    "roolith-css": "^1.5.0",
+    "swiper": "^4.4.1"
   }
 }

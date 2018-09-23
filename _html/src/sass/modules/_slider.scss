@@ -1,0 +1,46 @@
+.swiper-container {
+    width: 100%;
+    height: rem(320);
+
+    @include breakpoint(medium-up) {
+        height: rem(450);
+    }
+
+    @include breakpoint(large-up) {
+        height: rem(620);
+    }
+}
+
+.swiper-pagination-bullet-active {
+    background: $color-light;
+}
+
+.swiper-slide {
+    background: $color-black;
+}
+
+.swiper-button-prev {
+    left: rem(30);
+}
+
+.swiper-button-next {
+    right: rem(30);
+}
+
+.swiper-button-prev, .swiper-button-next {
+    outline: none;
+}
+
+.slider__fig {
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: rem(20);
+}

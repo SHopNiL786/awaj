@@ -5,6 +5,7 @@
 @import "settings";
 
 @import "../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
+@import "../../node_modules/swiper/dist/css/swiper.css";
 
 @import "mixin";
 @import "base";
@@ -28,6 +29,7 @@
 @import "./modules/article";
 @import "./modules/card";
 @import "./modules/meta";
+@import "./modules/slider";
 
 @import "./state";
 
