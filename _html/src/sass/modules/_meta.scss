@@ -1,0 +1,20 @@
+.meta {
+    background: $color-light;
+    padding: rem(10) 0 rem(30);
+
+    @include breakpoint(large-up) {
+        padding: rem(30) 0 rem(50);
+    }
+
+    &.theme--dark {
+        background: $color-primary;
+    }
+}
+
+.meta__hl {
+    padding-top: rem(20);
+
+    @include breakpoint(large-up) {
+        padding-bottom: rem(5);
+    }
+}
