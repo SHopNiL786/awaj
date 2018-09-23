@@ -1,23 +1,147 @@
-/* Inner header light 
-**********************/
-
-.inner__header__light {
-    background-color: $color-light;
+.inner__header {
+    background: $color-light;
+    padding: rem(14) 0 rem(48);
 }
 
-.inner__header__light__breadcrumb {
-    padding-top: rem(8);
+.inner__header__content {
+    .inner__header--has__image & {
+        position: relative;
+        z-index: 2;
+        height: rem(500);
+        margin-top: rem(-14);
+        padding-top: rem(14);
+        margin-bottom: rem(-48);
+        padding-bottom: rem(48);
+    }
 }
 
-.inner__header__light__text {
-    padding-top: rem(40);
-    padding-bottom: rem(27);
+.inner__header__breadcrumb {
+    position: relative;
+    z-index: 1;
+    color: $color-secondary;
+
+    .inner__header--has__image & {
+        color: $color-white;
+    }
+
+    .inner__header--white & {
+        color: $color-black;
+    }
+
+    a {
+        color: $color-secondary;
+
+        .inner__header--has__image & {
+            color: $color-white;
+        }
+
+        .inner__header--white & {
+            color: $color-black;
+        }
+
+        &:hover {
+            color: $color-primary;
+        }
+
+        &:after {
+            display: none;
+        }
+    }
 }
 
-.inner__header__light__text__title {
-    padding-bottom: rem(10);
+.inner__header__hl {
+    padding-top: rem(44);
+
+    .inner__header--has__image & {
+        position: relative;
+        z-index: 2;
+        color: $color-white;
+        padding-top: rem(4);
+    }
+
+    .inner__header--white & {
+        color: $color-black;
+    }
 }
 
-.inner__header__light__text__description {
-    padding-bottom: rem(10);
+.inner__header__text {
+    @extend .text__primary;
+    padding-top: rem(10);
+    max-width: 70%;
+}
+
+.inner__header--has__image {
+    position: relative;
+    z-index: 1;
+}
+
+.inner__header__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($color-primary, 0.5);
+    }
+
+    .inner__header--dark &:before {
+        background: rgba($color-black, 0.5);
+    }
+
+    .inner__header--white &:before {
+        background: rgba($color-white, 0.5);
+    }
+}
+
+.inner__header__content__area {
+    .inner__header--has__image & {
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        bottom: rem(50);
+    }
+}
+
+.inner__header__content__box {
+    width: rem(150);
+    height: rem(150);
+    background: $color-primary;
+    position: absolute;
+    left: rem(170);
+    bottom: rem(30);
+    z-index: 1;
+
+    &:after {
+        content: "";
+        display: block;
+        width: rem(50);
+        height: rem(50);
+        background: $color-primary;
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin-top: rem(-50);
+        margin-right: rem(-50);
+    }
+
+    .inner__header--dark &:after,
+    .inner__header--dark & {
+        background: $color-black;
+    }
+
+    .inner__header--white &:after,
+    .inner__header--white & {
+        background: $color-white;
+    }
 }
