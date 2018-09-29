@@ -1,10 +1,30 @@
 $fancy-image-size: rem(350);
 $fancy-box-size: rem(100);
 
+$fancy-secondary-image-width: rem(400);
+$fancy-secondary-image-height: rem(300);
+$fancy-secondary-box-width: rem(100);
+$fancy-secondary-box-height: rem(80);
+
 .fancy__img {
     position: relative;
     height: $fancy-image-size;
-    width: $fancy-image-size;
+    width: 100%;
+
+    @include breakpoint(medium-up) {
+        height: $fancy-image-size;
+        width: $fancy-image-size;
+    }
+
+    &.fancy__img--secondary {
+        height: $fancy-secondary-image-height;
+        width: 100%;
+        // margin: $fancy-secondary-box-height $fancy-secondary-box-width;
+
+        @include breakpoint(medium-up) {
+            width: $fancy-secondary-image-width;
+        }
+    }
 }
 
 .fancy__img__item {
@@ -19,10 +39,25 @@ $fancy-box-size: rem(100);
     position: absolute;
     width: $fancy-box-size;
     height: $fancy-box-size;
+    display: none;
+
+    @include breakpoint(large-up) {
+        display: block;
+    }
+
+    .fancy__img--secondary & {
+        width: $fancy-secondary-box-width;
+        height: $fancy-secondary-box-height;
+    }
 
     &.is--top-right {
         right: - $fancy-box-size;
         top: - $fancy-box-size;
+    }
+
+    .fancy__img--secondary &.is--top-right {
+        right: - $fancy-secondary-box-width;
+        top: - $fancy-secondary-box-height;
     }
 
     &.is--top-left {
@@ -30,13 +65,28 @@ $fancy-box-size: rem(100);
         top: - $fancy-box-size;
     }
 
+    .fancy__img--secondary &.is--top-left {
+        left: - $fancy-secondary-box-width;
+        top: - $fancy-secondary-box-height;
+    }
+
     &.is--bottom-right {
         right: - $fancy-box-size;
         bottom: - $fancy-box-size;
     }
 
+    .fancy__img--secondary &.is--bottom-right {
+        right: - $fancy-secondary-box-width;
+        bottom: - $fancy-secondary-box-height;
+    }
+
     &.is--bottom-left {
         left: - $fancy-box-size;
         bottom: - $fancy-box-size;
+    }
+
+    .fancy__img--secondary &.is--bottom-left {
+        left: - $fancy-secondary-box-width;
+        bottom: - $fancy-secondary-box-height;
     }
 }

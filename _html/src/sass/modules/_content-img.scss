@@ -1,0 +1,53 @@
+.content__img {
+    padding: rem(30) 0;
+
+    @include breakpoint(medium-up) {
+        padding: rem(60) 0 0;
+    }
+
+    @include breakpoint(large-up) {
+        padding: rem(100) 0;
+    }
+}
+
+.content__img__main {
+    padding-bottom: rem(30);
+
+    @include breakpoint(medium-up) {
+        float: right;
+        margin: 0 0 0 rem(60);
+        padding-bottom: 0;
+    }
+
+    @include breakpoint(large-up) {
+        margin: 0 0 0 rem(160);
+    }
+
+    .content__img--alternate & {
+        @include breakpoint(medium-up) {
+            float: left;
+            margin: 0 rem(60) 0 0;
+        }
+
+        @include breakpoint(large-up) {
+            margin: 0 rem(160) 0 0;
+        }
+    }
+}
+
+.content__img__hl {
+    padding-bottom: rem(15);
+
+    @include breakpoint(large-up) {
+        padding-bottom: rem(25);
+    }
+}
+
+.content__img__text {
+    @extend .text__secondary;
+
+    p {
+        @extend .text__secondary;
+        padding-bottom: rem(20);
+    }
+}
