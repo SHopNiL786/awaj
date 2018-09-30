@@ -6,6 +6,10 @@ export class Slider {
     }
 
     init() {
+        if ($('.swiper-container').length === 0) {
+            return false;
+        }
+
         new Swiper('.swiper-container', {
             direction: 'horizontal',
             loop: false,
