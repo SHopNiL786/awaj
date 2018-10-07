@@ -1,0 +1,41 @@
+.avatar {
+    width: rem(288);
+    height: rem(220);
+    position: relative;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: $color-black;
+    background-size: cover;
+}
+
+.avatar__caption {
+    background-color: $color-primary;
+    color: $color-white;
+    padding: rem(17) rem(20);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translateY(100%);
+    width: 100%;
+    @include transition('background');
+
+    .avatar:hover & {
+        background-color: $color-black;
+    }
+}
+
+.avatar__hl {
+    display: block;
+    @extend .h6;
+}
+
+.avatar__text {
+    display: block;
+    @extend .text__secondary;
+}
+
+.avatar__link {
+    &:after {
+        content: none;
+    }
+}

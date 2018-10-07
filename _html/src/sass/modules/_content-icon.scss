@@ -1,0 +1,27 @@
+.content__icon {
+    padding: rem(35) 0 0;
+
+    @include breakpoint(large-up) {
+        padding: rem(65) 0 rem(70);
+    }
+
+    &.theme--dark {
+        background: $color-primary;
+    }
+}
+
+.content__icon__header__hl {
+    padding-bottom: rem(20);
+}
+
+.content__icon__header {
+    padding-bottom: rem(70);
+}
+
+.content__icon__body__item__icon {
+    width: rem(60);
+}
+
+.content__icon__body__item__hl {
+    padding: rem(15) 0 rem(20);
+}
