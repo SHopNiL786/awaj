@@ -77,18 +77,20 @@
 }
 
 .nav__footer {
+    position: relative;
+
     ul {
 
         li {
-            padding-bottom: rem(8);
+            padding-bottom: rem(10);
 
             &:last-child {
                 padding-bottom: 0;
             }
 
             a {
-                font-size: rem(13);
-                line-height: rem(22);
+                font-size: rem(12);
+                line-height: rem(20);
 
                 &:after {
                     display: none;
