@@ -1,0 +1,30 @@
+$item-image-width: rem(495);
+$item-image-height: rem(233);
+
+.blog__header__hl {
+    margin: rem(17) 0 rem(12) 0;
+
+    a:after {
+        content: none;
+    }
+}
+
+.blog__header__author{
+    a:after {
+        content: none;
+    }
+}
+
+.blog__content__fig {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: $global-border-radius;
+    display: block;
+    margin: rem(27) 0 rem(30) 0;
+
+    @include breakpoint(medium-up) {
+        width: $item-image-width;
+        height: $item-image-height;
+    }
+}
