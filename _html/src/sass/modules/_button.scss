@@ -16,10 +16,11 @@ a.button {
     border: rem(1) solid $color-dark-grey;
     color: $color-black;
     font-size: rem(16);
-    min-width: rem(60);
+    min-width: rem(120);
     padding: 0 rem(40);
     position: relative;
     @include transition('background');
+    text-align: center;
 }
 
 a.button {
