@@ -1,12 +1,12 @@
 .avatar {
-    width: rem(288);
+    width: rem(275);
     height: rem(220);
     position: relative;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-color: $color-black;
     background-size: cover;
-    margin-bottom: rem(82);
+    margin-bottom: rem(102);
 }
 
 .avatar__caption {
@@ -39,4 +39,12 @@
     &:after {
         content: none;
     }
+}
+
+.avatar__header__hl {
+    padding: 0 0 rem(40);
+}
+
+.avatar__container {
+    padding: rem(70) 0;
 }

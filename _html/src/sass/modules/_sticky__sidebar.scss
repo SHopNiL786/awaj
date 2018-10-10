@@ -1,0 +1,15 @@
+.sticky__sidebar {
+    background: $color-light;
+    padding: rem(40);
+    position: fixed;
+}
+
+.sticky__sidebar ul li {
+    padding-bottom: 0.625rem;
+}
+
+.sticky__sidebar ul li a{
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+}
+

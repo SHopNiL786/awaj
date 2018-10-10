@@ -13,6 +13,10 @@ $item-image-height-sm: rem(110);
     }
 }
 
+.item__container {
+    padding: rem(100) 0 0;
+}
+
 .item__fig {
     background-repeat: no-repeat;
     background-position: center center;
