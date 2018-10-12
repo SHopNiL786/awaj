@@ -23,3 +23,11 @@
 .bg-color-light {
     background: $color-light;
 }
+
+.img-full-width {
+    width: 100%;
+
+    img {
+        max-width: 100%;
+    }
+}

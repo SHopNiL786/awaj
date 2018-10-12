@@ -1,5 +1,5 @@
 .content__icon {
-    padding: rem(35) 0 0;
+    padding: rem(40) 0 0;
 
     @include breakpoint(large-up) {
         padding: rem(65) 0 rem(70);
@@ -16,6 +16,18 @@
 
 .content__icon__header {
     padding-bottom: rem(70);
+}
+
+.content__icon__header__text {
+    @extend .text__primary;
+}
+
+.content__icon__body__item {
+    padding-bottom: rem(50);
+
+    @include breakpoint(large-up) {
+        padding-bottom: rem(20);
+    }
 }
 
 .content__icon__body__item__icon {

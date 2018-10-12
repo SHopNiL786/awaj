@@ -1,5 +1,9 @@
 .spacer-150 {
-    height: rem(150);
+    height: rem(50);
+
+    @include breakpoint(large-up) {
+        height: rem(150);
+    }
 }
 
 .spacer-100 {
