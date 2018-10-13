@@ -1,5 +1,9 @@
 .blog {
-    padding-top: rem(70);
+    padding-top: rem(40);
+
+    @include breakpoint(large-up) {
+        padding-top: rem(70);
+    }
 }
 
 .blog__header {
@@ -47,7 +51,11 @@
 
 .blog__nav {
     @include clearfix();
-    padding: rem(140) 0;
+    padding: rem(70) 0;
+
+    @include breakpoint(large-up) {
+        padding: rem(140) 0;
+    }
 }
 
 .blog__nav__primary {
@@ -58,3 +66,25 @@
     float: right;
 }
 
+.blog__aside__nav {
+    @extend .nav__footer;
+    background: $color-light;
+    padding: rem(30);
+    border-radius: $global-border-radius;
+    margin-bottom: rem(20);
+
+    @include breakpoint(large-up) {
+        margin-top: rem(100);
+    }
+
+    ul {
+
+        li {
+
+            a {
+                font-size: rem(14);
+                line-height: rem(22);
+            }
+        }
+    }
+}

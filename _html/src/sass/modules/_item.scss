@@ -14,21 +14,30 @@ $item-image-height-sm: rem(110);
 }
 
 .item__container {
-    padding: rem(100) 0 0;
+    padding: rem(40) 0 0;
+
+    @include breakpoint(large-up) {
+        padding: rem(100) 0 0;
+    }
 }
 
 .item__fig {
+    width: calc(100vw - 40px);
+    height: $item-image-height;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     border-radius: $global-border-radius;
+    margin-bottom: rem(20);
 
     @include breakpoint(medium-up) {
+        width: $item-image-width;
+    }
+
+    @include breakpoint(large-up) {
         position: absolute;
         left: 0;
         top: 0;
-        width: $item-image-width;
-        height: $item-image-height;
     }
 
     .item--small & {
@@ -42,14 +51,14 @@ $item-image-height-sm: rem(110);
         padding-left: 0;
     }
 
-    @include breakpoint(medium-up) {
+    @include breakpoint(large-up) {
         padding-left: $item-image-width + rem(43);
     }
 
     .item--small & {
         padding-left: 0;
 
-        @include breakpoint(medium-up) {
+        @include breakpoint(large-up) {
             padding-left: $item-image-width-sm + rem(25);
         }
     }
@@ -71,8 +80,10 @@ $item-image-height-sm: rem(110);
     padding-bottom: rem(40);
 }
 
+.item__hl {
+    padding-bottom: rem(30);
 
-
-
-
-
+    @include breakpoint(large-up) {
+        padding-bottom: rem(60);
+    }
+}

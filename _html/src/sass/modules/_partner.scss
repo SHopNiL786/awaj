@@ -2,14 +2,15 @@
     padding: rem(40) 0;
     background: $color-light;
 
+    &.theme--white {
+        background: $color-white;
+    }
+
     @include breakpoint(large-up) {
         padding: rem(100) 0;
     }
 }
 
-.partner--no__bg {
-    background: none;
-}
 .partner__hl {
     text-align: center;
     padding-bottom: rem(40);
