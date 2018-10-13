@@ -5,6 +5,10 @@
         background: $color-primary;
     }
 
+    &.theme--light {
+        background: $color-light;
+    }
+
     @include breakpoint(large-up) {
         padding: rem(70) 0;
     }

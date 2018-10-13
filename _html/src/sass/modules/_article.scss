@@ -104,4 +104,17 @@
             padding-bottom: 0;
         }
     }
+
+    h6 {
+        padding-bottom: rem(10);
+
+        & + p {
+            padding-bottom: 0;
+            @extend .text__secondary;
+        }
+
+        a:after {
+            content: none;
+        }
+    }
 }
