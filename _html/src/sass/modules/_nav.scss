@@ -58,11 +58,111 @@
 }
 
 .nav {
-    li {
-        @extend .nav-item;
+    margin-left: 0;
+    max-height: 78vh;
+    overflow: auto;
 
-        a {
+    @include breakpoint(large-up) {
+        max-height: none;
+        overflow: visible;
+    }
+
+    .header--compact & {
+        max-height: 80vh;
+
+        @include breakpoint(large-up) {
+            max-height: none;
+        }
+    }
+
+    a:after {
+        content: none;
+    }
+
+    > li {
+        @extend .nav-item;
+        position: relative;
+
+        > a {
             @extend .nav-link;
+        }
+
+        > ul {
+            display: block;
+            padding: rem(18) rem(30);
+
+            @include breakpoint(large-up) {
+                display: none;
+                position: absolute;
+                background: $color-primary;
+                border-radius: $global-border-radius;
+                z-index: 5;
+                left: 50%;
+                top: rem(50);
+                transform: translateX(-50%);
+                box-shadow: 0 rem(4) rem(4) 0 rgba($color-black, 0.2);
+            }
+
+            .header--compact & {
+                top: rem(40);
+                left: rem(-15);
+                transform: translateX(0%);
+            }
+
+            &:before {
+                content: "";
+                display: none;
+                width: 0;
+                height: 0;
+                border-left: rem(10) solid transparent;
+                border-right: rem(10) solid transparent;
+                border-bottom: rem(10) solid $color-primary;
+                position: absolute;
+                left: 50%;
+                top: 0;
+                z-index: 2;
+                transform: translate(-50%, -100%);
+
+                @include breakpoint(large-up) {
+                    display: block;
+                }
+            }
+
+            li {
+                border-bottom: rem(1) solid rgba($color-secondary, 0.2);
+
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+
+            a {
+                white-space: nowrap;
+                color: $color-primary;
+                padding: rem(12) 0;
+                font-size: rem(14);
+
+                .theme--dark & {
+                    color: $color-white;
+                }
+
+                @include breakpoint(large-up) {
+                    color: $color-white;
+                }
+
+                &:hover {
+                    color: $color-secondary;
+                }
+            }
+
+            ul {
+                padding-left: rem(20);
+            }
+        }
+
+        &:hover ul,
+        &.on-hover ul {
+            display: block;
         }
     }
 }
