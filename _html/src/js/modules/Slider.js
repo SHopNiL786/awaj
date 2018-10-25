@@ -1,4 +1,5 @@
 import Swiper from 'swiper';
+import { Utils } from './Utils';
 
 export class Slider {
     constructor() {
@@ -6,22 +7,59 @@ export class Slider {
     }
 
     init() {
-        if ($('.swiper-container').length === 0) {
+        this.primarySlider();
+        this.secondarySlider();
+    }
+
+    primarySlider() {
+        if ($('.slider .swiper-container').length === 0) {
             return false;
         }
 
-        new Swiper('.swiper-container', {
+        new Swiper('.slider .swiper-container', {
             direction: 'horizontal',
             loop: false,
 
             pagination: {
-                el: '.swiper-pagination',
+                el: '.slider .swiper-pagination',
             },
 
             navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+                nextEl: '.slider .swiper-button-next',
+                prevEl: '.slider .swiper-button-prev',
             }
         });
+    }
+
+    secondarySlider() {
+        if ($('.slider__carousel .swiper-container').length === 0) {
+            return false;
+        }
+
+        let slidesPerView = this.getSecondarySliderPerView();
+
+        new Swiper('.slider__carousel .swiper-container', {
+            direction: 'horizontal',
+            loop: false,
+
+            slidesPerView: slidesPerView,
+
+            pagination: {
+                el: '.slider__carousel .swiper-pagination',
+                clickable: true,
+            },
+        });
+    }
+
+    getSecondarySliderPerView() {
+        let slidesPerView = 7;
+
+        if (Utils.isSmallScreen()) {
+            slidesPerView = 3;
+        } else if (Utils.isMediumScreen()) {
+            slidesPerView = 5;
+        }
+
+        return slidesPerView;
     }
 }

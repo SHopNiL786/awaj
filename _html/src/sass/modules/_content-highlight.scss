@@ -1,0 +1,27 @@
+.content__highlight {
+    background: $color-light;
+    padding: rem(30) 0;
+
+    @include breakpoint(large-up) {
+        padding: rem(60) 0;
+    }
+}
+
+.content__highlight__hl {
+    color: $color-secondary;
+}
+
+.content__highlight__text {
+    @extend .text__primary;
+    color: $color-primary;
+    padding-top: rem(15);
+}
+
+.content__highlight__button {
+    margin-top: rem(30);
+
+    @include breakpoint(large-up) {
+        margin-top: rem(15);
+        float: right;
+    }
+}

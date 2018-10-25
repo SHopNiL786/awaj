@@ -620,27 +620,43 @@ button.swiper-pagination-bullet {
 // swiper slider
 
 
-.swiper-container {
-    // max-width: rem(1440);
-    // margin: auto;
-    width: 100%;
-    height: rem(320);
+.slider {
+    .swiper-container {
+        // max-width: rem(1440);
+        // margin: auto;
+        width: 100%;
+        height: rem(320);
 
-    @include breakpoint(medium-up) {
-        height: rem(450);
+        @include breakpoint(medium-up) {
+            height: rem(450);
+        }
+
+        @include breakpoint(large-up) {
+            height: rem(620);
+        }
     }
 
-    @include breakpoint(large-up) {
-        height: rem(620);
+    .swiper-pagination-bullet-active {
+        background: $color-light;
     }
-}
 
-.swiper-pagination-bullet-active {
-    background: $color-light;
-}
+    .swiper-slide {
+        background: $color-black;
+    }
 
-.swiper-slide {
-    background: $color-black;
+    .slider__fig {
+        width: 100%;
+        height: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .swiper-pagination-fraction,
+    .swiper-pagination-custom,
+    .swiper-container-horizontal > .swiper-pagination-bullets {
+        bottom: rem(20);
+    }
 }
 
 .swiper-button-prev {
@@ -655,16 +671,55 @@ button.swiper-pagination-bullet {
     outline: none;
 }
 
-.slider__fig {
-    width: 100%;
-    height: 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.slider__carousel {
+    text-align: center;
+    position: relative;
+    padding: rem(40) 0 0;
+    margin-bottom: rem(80);
+
+    @include breakpoint(medium-up) {
+        padding: rem(60) 0 0;
+        margin-bottom: rem(100);
+    }
+
+    @include breakpoint(large-up) {
+        padding: rem(100) 0 0;
+        margin-bottom: rem(180);
+    }
+
+    .swiper-pagination-fraction,
+    .swiper-pagination-custom,
+    .swiper-container-horizontal > .swiper-pagination-bullets {
+        bottom: rem(0);
+    }
+
+    .swiper-pagination {
+        bottom: rem(-40);
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include breakpoint(medium-up) {
+            bottom: rem(-60);
+        }
+
+        @include breakpoint(large-up) {
+            bottom: rem(-80);
+        }
+
+        .swiper-pagination-bullet {
+            margin: 0 rem(3);
+        }
+    }
 }
 
-.swiper-pagination-fraction,
-.swiper-pagination-custom,
-.swiper-container-horizontal > .swiper-pagination-bullets {
-    bottom: rem(20);
+.slider__carousel__hl {
+    padding-bottom: rem(30);
+
+    @include breakpoint(medium-up) {
+        padding-bottom: rem(40);
+    }
+
+    @include breakpoint(large-up) {
+        padding-bottom: rem(60);
+    }
 }
