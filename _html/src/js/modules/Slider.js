@@ -3,6 +3,8 @@ import { Utils } from './Utils';
 
 export class Slider {
     constructor() {
+        this.sliderAutoplayDelay = 5000;
+
         this.init();
     }
 
@@ -27,7 +29,12 @@ export class Slider {
             navigation: {
                 nextEl: '.slider .swiper-button-next',
                 prevEl: '.slider .swiper-button-prev',
-            }
+            },
+
+            autoplay: {
+                delay: this.sliderAutoplayDelay,
+                disableOnInteraction: false,
+            },
         });
     }
 
@@ -47,6 +54,11 @@ export class Slider {
             pagination: {
                 el: '.slider__carousel .swiper-pagination',
                 clickable: true,
+            },
+
+            autoplay: {
+                delay: this.sliderAutoplayDelay,
+                disableOnInteraction: false,
             },
         });
     }

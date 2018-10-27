@@ -1,8 +1,19 @@
 export class Header {
     constructor() {
+        this.populateFixedMenu();
         this.stickyMenu();
         this.mobileMenu();
         this.dropdownMenu();
+    }
+
+    populateFixedMenu() {
+        if ($('#top').length === 0) {
+            return false;
+        }
+
+        const headerHtml = $('#top .header__nav').html();
+
+        $('.header--fixed .header__nav').html(headerHtml);
     }
 
     stickyMenu() {

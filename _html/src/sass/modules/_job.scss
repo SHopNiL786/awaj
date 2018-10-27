@@ -1,0 +1,15 @@
+.job {
+    padding: 0 0 rem(40) 0;
+
+    @include breakpoint(large-up) {
+        padding: 0 0 rem(60) 0;
+    }
+}
+
+.job__hl {
+    padding: rem(40) 0 rem(20);
+
+    @include breakpoint(large-up) {
+        padding: rem(60) 0 rem(30);
+    }
+}

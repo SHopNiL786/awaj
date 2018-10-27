@@ -32,8 +32,17 @@
 
 .content__icon__body__item__icon {
     width: rem(60);
+
+    svg {
+        fill: $color-primary;
+    }
 }
 
 .content__icon__body__item__hl {
     padding: rem(15) 0 rem(20);
+    color: $color-primary;
+
+    .theme--dark & {
+        color: $color-white;
+    }
 }

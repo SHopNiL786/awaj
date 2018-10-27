@@ -1,0 +1,23 @@
+.general {
+    .article {
+        padding: 0;
+    }
+
+    padding: rem(40) 0;
+
+    @include breakpoint(large-up) {
+        padding: rem(80) 0;
+    }
+}
+
+.general__aside {
+    padding-top: rem(60);
+
+    @include breakpoint(large-up) {
+        padding-top: 0;
+    }
+}
+
+.general__aside__hl {
+    padding-bottom: rem(30);
+}
