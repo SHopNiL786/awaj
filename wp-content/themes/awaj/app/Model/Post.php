@@ -54,6 +54,17 @@ class Post
 
         return $post->result;
     }
+
+    /**
+     * Get a single post by result index
+     *
+     * @param $index
+     * @return mixed
+     */
+    public function eq($index)
+    {
+        return $this->result->posts[$index];
+    }
 }
 
 

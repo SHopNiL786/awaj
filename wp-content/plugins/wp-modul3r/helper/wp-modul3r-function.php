@@ -293,3 +293,64 @@ function w3r_search_filer($sql) {
     return $sqlr;
 }
 add_filter('posts_search', 'w3r_search_filer');
+
+
+/**
+ * Add meta box for add new page
+ */
+function w3r_show_page_modules() {
+    global $wpdb;
+    $tableName = $wpdb->prefix.'modul3r';
+
+    $post_id = intval($_GET['post']);
+    $modules = $wpdb->get_results("SELECT * FROM {$tableName} WHERE page_id = $post_id ORDER BY module_order");
+
+    if (count($modules) > 0) :
+    ?>
+
+    <table class="widefat striped">
+        <thead>
+        <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Theme key</th>
+            <th style="text-align: center">Order</th>
+            <th>Created</th>
+            <th>Updated</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php foreach($modules as $m) : ?>
+            <tr>
+                <td width="2%"><?= $m->state ? '<span class="dashicons dashicons-visibility wp-modul3r-color-success"></span>' : '<span class="dashicons dashicons-hidden wp-modul3r-color-danger"></span>' ?></td>
+                <td width="40%">
+                    <a href="<?= admin_url('admin.php?page='.WPMODUL3R_SLUG.'&edit='.$m->id) ?>">
+                        <?= $m->name ?>
+                    </a>
+                </td>
+                <td><?= $m->theme_key ?></td>
+                <td align="center"><?= $m->module_order ?></td>
+                <td><?= human_time_diff(strtotime($m->created_at)) . ' ago' ?></td>
+                <td><?= human_time_diff(strtotime($m->updated_at)) . ' ago' ?></td>
+            </tr>
+        <?php endforeach; ?>
+        </tbody>
+    </table>
+
+    <br>
+    <a href="<?= admin_url('admin.php?page='.WPMODUL3R_SLUG.'-module-add') ?>" class="button button-primary button-large">Add new module</a>
+
+    <?php
+    else :
+        echo '<p>No module! <a href="'.admin_url('admin.php?page='.WPMODUL3R_SLUG.'-module-add').'" class="page-title-action">Create new module</a></p>';
+    endif;
+
+}
+
+function add_w3r_meta_box() {
+    if (isset($_GET['post'])) {
+        add_meta_box('w3r-admin-meta-box', 'Page modules', 'w3r_show_page_modules', 'page', 'normal', 'high', null);
+    }
+}
+
+add_action('add_meta_boxes', 'add_w3r_meta_box');

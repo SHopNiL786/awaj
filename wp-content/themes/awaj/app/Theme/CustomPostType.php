@@ -15,7 +15,9 @@ class CustomPostType
     /**
      * Set custom post type array
      *
-     * @param $this
+     * @param array $array
+     * @return $this
+     * @internal param $this
      */
     public function set($array = [])
     {
@@ -27,7 +29,7 @@ class CustomPostType
     /**
      * Register custom post type
      *
-     * @return @this
+     * @return $this|bool @this
      */
     public function register()
     {

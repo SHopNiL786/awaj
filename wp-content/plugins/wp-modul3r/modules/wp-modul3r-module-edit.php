@@ -84,6 +84,7 @@ $selectedModuleStructure = $module->structure_id;
 
 <div class="wrap">
     <h1 class="wp-heading-inline">Edit Module: <?= $module->name ?></h1>
+    <a href="<?= admin_url('post.php?post='.$module->page_id.'&action=edit') ?>" class="page-title-action">Back to page "<?= get_the_title($module->page_id) ?>"</a>
     <hr class="wp-header-end">
 
     <?php if($message) : ?>

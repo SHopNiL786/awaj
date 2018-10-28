@@ -5,7 +5,9 @@
             "email": "hadicse@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "nesbot/carbon": "^1.34"
+    },
     "autoload": {
         "psr-4": {"App\\": "app/"}
     }

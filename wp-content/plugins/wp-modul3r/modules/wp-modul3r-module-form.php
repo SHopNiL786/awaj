@@ -41,7 +41,11 @@ $pages = $wpdb->get_results("SELECT ID, post_title FROM $wpdb->posts WHERE post_
                     }
                 ?>
                 <input type="text" name="theme_key" id="theme_key" value="<?= $theme_key ?>" required>
-                <span class="description">This must be unique. So in theme you can use <code>w3r_get_module("theme_key", "page_id")</code></span>
+                <?php if ($theme_key && $module) : ?>
+                    <span class="description">This must be unique. So in theme you can use <code>w3r_get_module("<?= $theme_key ?>", "<?= sanitize_title_with_dashes(get_the_title($module->page_id)) ?>")</code></span>
+                <?php else : ?>
+                    <span class="description">This must be unique. So in theme you can use <code>w3r_get_module("theme_key", "page_id")</code></span>
+                <?php endif; ?>
             </td>
         </tr>
         <tr>

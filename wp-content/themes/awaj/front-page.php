@@ -1,12 +1,15 @@
 <?php
+/* Template Name: Frontpage template */
 use App\Theme\Helper as _;
-use App\Model\Post;
 
 get_header();
-// _::view('partial/module', 'hero');
-?>
 
-front page
+$modules = w3r_get_modules('frontpage');
 
-<?php
+foreach($modules as $moduleName => $moduleData) {
+    if (isset($modules[$moduleName])) {
+        _::view('modules/module', $moduleName, $moduleData);
+    }
+}
+
 get_footer();

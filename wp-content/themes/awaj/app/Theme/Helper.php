@@ -8,6 +8,8 @@
 
 namespace App\Theme;
 
+use Carbon\Carbon;
+
 class Helper
 {
     /**
@@ -73,20 +75,49 @@ class Helper
     /**
      * Wordpress get template part
      *
+     * @param $arg1
+     * @param $arg2
+     * @param bool $data
      * @return include
      */
-    public static function view($arg1, $arg2)
+    public static function view($arg1, $arg2, $data = false)
     {
+        $prefix = self::dashesToCamelCase($arg2);
+
+        if ($data) {
+            set_query_var($prefix.'ModuleData', $data);
+        }
+
         return get_template_part($arg1, $arg2);
+
+        /*
+        if ($data) {
+            ${$arg2.'ModuleData'} = $data;
+        }
+
+        $file = $arg1.'-'.$arg2.'.php';
+        $templateFile = locate_template($file, false, false);
+
+        if (!$templateFile) {
+            trigger_error(sprintf(__('Error locating %s for inclusion', 'sage'), $file), E_USER_ERROR);
+        }
+
+        require($templateFile);
+        */
     }
 
     /**
      * Get a post link
      *
+     * @param bool $id
      * @return string
      */
-    public static function link()
+    public static function link($id = false)
     {
+        if ($id) {
+            return get_permalink($id);
+        }
+
         return get_the_permalink();
     }
 
@@ -193,5 +224,34 @@ class Helper
     public static function getBodyClass($class = null)
     {
         return get_body_class($class);
+    }
+
+    /**
+     * Slug to camel case
+     *
+     * @param $string
+     * @param bool|false $capitalizeFirstCharacter
+     * @return mixed|string
+     */
+    public static function dashesToCamelCase($string, $capitalizeFirstCharacter = false)
+    {
+        $str = str_replace('-', '', ucwords($string, '-'));
+
+        if (!$capitalizeFirstCharacter) {
+            $str = lcfirst($str);
+        }
+
+        return $str;
+    }
+
+    /**
+     * Format date
+     *
+     * @param $date
+     * @return string
+     */
+    public static function formatDate($date)
+    {
+        return Carbon::createFromFormat('Y-m-d H:i:s', $date)->format('l, M j, Y');
     }
 }

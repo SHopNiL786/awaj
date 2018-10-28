@@ -1991,8 +1991,8 @@ input, textarea, select {
   .content__card__item:after {
     display: none; }
   .content__card__item:hover .content__card__item__fig {
-    -webkit-animation: scaleImage 20s infinite;
-    animation: scaleImage 20s infinite; }
+    -webkit-animation: scaleImage 40s infinite;
+    animation: scaleImage 40s infinite; }
 
 @-webkit-keyframes scaleImage {
   0% {
@@ -2025,6 +2025,7 @@ input, textarea, select {
       padding: 1.6875rem 1.875rem; } }
 
 .content__card__item__hl {
+  font-weight: 400;
   padding-top: 0.3125rem; }
 
 .content__card__item__meta {

@@ -41,6 +41,7 @@ class Core
      * Add supports to theme
      *
      * @param array $array
+     * @return $this|bool
      */
     public function addSupports($array = [])
     {
@@ -69,6 +70,7 @@ class Core
      * Add menu locations
      *
      * @param array $array
+     * @return $this
      */
     public function addMenuLocations($array = [])
     {
@@ -82,6 +84,7 @@ class Core
      * Add custom post type
      *
      * @param array $array
+     * @return $this
      */
     public function addCustomPostType($array = [])
     {
@@ -95,6 +98,7 @@ class Core
      * Add filters
      *
      * @param array $array
+     * @return $this
      */
     public function addFilters($array = [])
     {
@@ -115,6 +119,7 @@ class Core
      * Add widgets
      *
      * @param array $array
+     * @return $this
      */
     public function addWidgets($array = [])
     {

@@ -19,9 +19,9 @@ $theme->injectAssets([
 ])
 ->addMenuLocations([
     'primary-menu' => 'Primary menu',
-    'secondary-menu' => 'Secondary menu',
-    'tertiary-menu' => 'Tertiary menu',
-    'social-menu' => 'Social menu',
+    // 'secondary-menu' => 'Secondary menu',
+    // 'tertiary-menu' => 'Tertiary menu',
+    // 'social-menu' => 'Social menu',
 ])
 // ->addCustomPostType([
 //     'product' => [

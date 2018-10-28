@@ -82,11 +82,11 @@ class Asset
             foreach ($this->js as $key => $js) {
                 $jsArray = explode('@', $js);
 
-                wp_enqueue_script( $key, get_template_directory_uri().$jsArray[0], '', $jsArray[1], true );
+                wp_enqueue_script( $key, get_template_directory_uri().$jsArray[0], array('jquery'), $jsArray[1], true );
             }
         }
         else {
-            wp_enqueue_script( 'js', get_template_directory_uri().'/dist/app.js', '', '1.0', true );
+            wp_enqueue_script( 'js', get_template_directory_uri().'/dist/app.js', array('jquery'), '1.0', true );
         }
 
         return $this;
