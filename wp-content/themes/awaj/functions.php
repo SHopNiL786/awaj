@@ -23,19 +23,22 @@ $theme->injectAssets([
     // 'tertiary-menu' => 'Tertiary menu',
     // 'social-menu' => 'Social menu',
 ])
-// ->addCustomPostType([
-//     'product' => [
-//         'name' => 'Products',
-//         'singular_name' => 'Product',
-//         'arguments' => [
-//             'description'   => 'Holds our products and product specific data',
-//             'public'        => true,
-//             'menu_position' => 5,
-//             'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
-//             'has_archive'   => true,
-//         ]
-//     ]
-// ])
+->addCustomPostType([
+    'team' => [
+        'name' => 'Team',
+        'singular_name' => 'Staff',
+        'arguments' => [
+            'description'   => 'All team member data',
+            'public'        => true,
+            'menu_position' => 5,
+            'menu_icon'     => 'dashicons-groups',
+            'supports'      => array( 'title', 'editor', 'thumbnail' ),
+            'taxonomies'    => array( 'category' ),
+            'has_archive'   => true,
+            'exclude_from_search' => false,
+        ]
+    ]
+])
 ->addFilters([
     'excerpt_length' => 16,
     'remove_archive_title' => true,
@@ -56,3 +59,8 @@ function dd($array) {
     print_r($array);
     echo '</pre>';
 }
+
+function yoasttobottom() {
+    return 'low';
+}
+add_filter( 'wpseo_metabox_prio', 'yoasttobottom');

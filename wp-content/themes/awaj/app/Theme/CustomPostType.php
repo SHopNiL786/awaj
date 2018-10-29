@@ -41,8 +41,18 @@ class CustomPostType
             add_action( 'init', function() use($key, $value){
                 $defaultArguments = [
                     'labels' => [
-                        'name' => __( $value['name'] ),
-                        'singular_name' => __( $value['singular_name'] )
+                        'name'                  => __( $value['name'] ),
+                        'singular_name'         => __( $value['singular_name'] ),
+                        'menu_name'             => _x($value['name'], 'admin menu'),
+                        'name_admin_bar'        => _x($value['name'], 'admin bar'),
+                        'add_new'               => _x('Add New '.$value['singular_name'], 'add new'),
+                        'add_new_item'          => __('Add New '.$value['singular_name']),
+                        'new_item'              => __('New '.$value['singular_name']),
+                        'edit_item'             => __('Edit '.$value['singular_name']),
+                        'view_item'             => __('View '.$value['singular_name']),
+                        'all_items'             => __('All '.$value['singular_name']),
+                        'search_items'          => __('Search '.$value['singular_name']),
+                        'not_found'             => __('No '.$value['singular_name'].' found.'),
                     ],
                     'public' => true,
                     'has_archive' => true,
