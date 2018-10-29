@@ -79,6 +79,7 @@ $table_prefix  = 'af_';
  */
 define('WP_DEBUG', false);
 
+define('FS_METHOD', 'direct');
 define('WP_POST_REVISIONS', false );
 
 /* That's all, stop editing! Happy blogging. */

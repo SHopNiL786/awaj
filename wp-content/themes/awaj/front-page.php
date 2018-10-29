@@ -6,9 +6,11 @@ get_header();
 
 $modules = w3r_get_modules('frontpage');
 
-foreach($modules as $moduleName => $moduleData) {
-    if (isset($modules[$moduleName])) {
-        _::view('modules/module', $moduleName, $moduleData);
+if (count($modules) > 0) {
+    foreach($modules as $moduleName => $moduleData) {
+        if (isset($modules[$moduleName])) {
+            _::view('modules/module', $moduleName, $moduleData);
+        }
     }
 }
 

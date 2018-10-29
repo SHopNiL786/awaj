@@ -4,3 +4,13 @@ Author: im4aLL
 Author URI: http://habibhadi.com
 Version: 1.0
  */
+
+.breadcrumb .sep {
+    display: inline-block;
+    padding: 0 5px;
+    opacity: 0.3;
+}
+
+.partners__list__item a:after {
+    content: none;
+}
