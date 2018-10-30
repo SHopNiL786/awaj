@@ -24,8 +24,8 @@ $theme->injectAssets([
     // 'social-menu' => 'Social menu',
 ])
 ->addCustomPostType([
-    'team' => [
-        'name' => 'Team',
+    'staff' => [
+        'name' => 'Staff',
         'singular_name' => 'Staff',
         'arguments' => [
             'description'   => 'All team member data',
