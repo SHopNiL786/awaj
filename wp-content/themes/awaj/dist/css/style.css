@@ -3555,7 +3555,8 @@ button.swiper-pagination-bullet {
   @media (min-width: 1024px) {
     .avatar__single {
       float: right;
-      padding-top: 5.3125rem; } }
+      padding-top: 5.3125rem;
+      padding-bottom: 3.75rem; } }
   .avatar__single img {
     border-radius: 0.1875rem; }
 

@@ -254,4 +254,48 @@ class Helper
     {
         return Carbon::createFromFormat('Y-m-d H:i:s', $date)->format('l, M j, Y');
     }
+
+    /**
+     * Get custom field from acf
+     *
+     * @param $fieldName
+     * @param bool|false $postId
+     * @return mixed|null|void
+     */
+    public static function acfField($fieldName, $postId = false)
+    {
+        if ($postId) {
+            $value = get_field($fieldName, $postId);
+        } else {
+            $value = get_field($fieldName);
+        }
+
+        if (strlen(trim($value)) > 0) {
+            return $value;
+        }
+
+        return false;
+    }
+
+    /**
+     * Get all acf fields of a object
+     *
+     * @param $postId
+     * @return object
+     */
+    public static function acfFields($postId)
+    {
+        $result = [];
+        $data = get_fields($postId);
+
+        if (count($data) > 0) {
+            foreach($data as $key => $value) {
+                if (strlen(trim($value)) > 0) {
+                    $result[$key] = $value;
+                }
+            }
+        }
+
+        return (object) $result;
+    }
 }

@@ -96,6 +96,7 @@
     @include breakpoint(large-up) {
         float: right;
         padding-top: rem(85);
+        padding-bottom: rem(60);
     }
 
     img {

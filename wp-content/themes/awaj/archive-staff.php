@@ -1,5 +1,4 @@
 <?php
-/* Template Name: Staff template */
 use App\Model\Post;
 use App\Theme\Helper as _;
 
@@ -40,14 +39,14 @@ if (count($categories) > 0) :
                         $staffs = Post::where(['post_type' => 'staff', 'posts_per_page' => -1, 'cat' => $category->term_id])->get();
                         $staffs->each(function($staff){
                             ?>
-                                <a href="<?= _::link($staff->ID) ?>" class="avatar__link">
-                                    <figure class="avatar" style="background-image: url('<?= _::getFeaturedImageUrl('full', $staff->ID) ?>')">
-                                        <figcaption class="avatar__caption">
-                                            <span class="avatar__hl"><?= $staff->post_title ?></span>
-                                            <span class="avatar__text"><?= _::acfField( 'designation', $staff->ID ) ?></span>
-                                        </figcaption>
-                                    </figure>
-                                </a>
+                            <a href="<?= _::link($staff->ID) ?>" class="avatar__link">
+                                <figure class="avatar" style="background-image: url('<?= _::getFeaturedImageUrl('full', $staff->ID) ?>')">
+                                    <figcaption class="avatar__caption">
+                                        <span class="avatar__hl"><?= $staff->post_title ?></span>
+                                        <span class="avatar__text"><?= get_field( 'designation', $staff->ID ) ?></span>
+                                    </figcaption>
+                                </figure>
+                            </a>
                             <?php
                         });
                         ?>
