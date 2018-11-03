@@ -82,6 +82,12 @@ class Helper
      */
     public static function view($arg1, $arg2, $data = false)
     {
+        $sep = '__';
+        if (strstr($arg2, $sep)) {
+            $temp = explode($sep, $arg2);
+            $arg2 = $temp[1];
+        }
+
         $prefix = self::dashesToCamelCase($arg2);
 
         if ($data) {
@@ -297,5 +303,16 @@ class Helper
         }
 
         return (object) $result;
+    }
+
+    /**
+     * Determine whether if variable contains value or not
+     *
+     * @param $value
+     * @return bool
+     */
+    public static function notNull($value)
+    {
+        return strlen(trim($value)) > 0;
     }
 }
