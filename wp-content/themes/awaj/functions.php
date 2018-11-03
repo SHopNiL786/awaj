@@ -37,6 +37,20 @@ $theme->injectAssets([
             'has_archive'   => true,
             'exclude_from_search' => false,
         ]
+    ],
+    'project' => [
+        'name' => 'Projects',
+        'singular_name' => 'Project',
+        'arguments' => [
+            'description'   => 'All Projects',
+            'public'        => true,
+            'menu_position' => 5,
+            'menu_icon'     => 'dashicons-grid-view',
+            'supports'      => array( 'title', 'editor', 'thumbnail' ),
+            'taxonomies'    => array( 'category' ),
+            'has_archive'   => true,
+            'exclude_from_search' => false,
+        ]
     ]
 ])
 ->addFilters([

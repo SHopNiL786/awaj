@@ -311,12 +311,12 @@ function w3r_show_page_modules() {
     <table class="widefat striped">
         <thead>
         <tr>
-            <th></th>
-            <th>Name</th>
-            <th>Theme key</th>
-            <th style="text-align: center">Order</th>
-            <th>Created</th>
-            <th>Updated</th>
+            <th width="2%"></th>
+            <th width="40%">Name</th>
+            <th width="18%">Theme key</th>
+            <th style="text-align: center" width="10%">Order</th>
+            <th width="10%">Created</th>
+            <th width="10%">Updated</th>
         </tr>
         </thead>
         <tbody>

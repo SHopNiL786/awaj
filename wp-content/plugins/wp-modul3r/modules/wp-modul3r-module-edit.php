@@ -49,7 +49,7 @@ if(isset($_POST['submit'])) {
             $additonalData = [];
             $additonalData['module_id'] = $id;
             $additonalData['field_key'] = $key;
-            $additonalData['field_value'] = $value;
+            $additonalData['field_value'] = str_replace('\\', '', $value);
 
             $mData = $wpdb->get_results("SELECT id FROM {$wpdb->prefix}modul3r_data WHERE module_id = {$id} AND field_key = '{$key}'");
             if(count($mData) == 0) {

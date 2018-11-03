@@ -31,19 +31,19 @@ if(count($modules) > 0) {
             <table class="widefat striped">
                 <thead>
                 <tr>
-                    <th></th>
-                    <th>Name</th>
-                    <th>Theme key</th>
-                    <th style="text-align: center">Order</th>
-                    <th>Created</th>
-                    <th>Updated</th>
+                    <th width="2%"></th>
+                    <th width="40%">Name</th>
+                    <th width="18%">Theme key</th>
+                    <th style="text-align: center" width="10%">Order</th>
+                    <th width="10%">Created</th>
+                    <th width="10%">Updated</th>
                 </tr>
                 </thead>
                 <tbody>
                 <?php foreach($modules as $m) : if($m->page_id == $page->ID) : ?>
                     <tr>
-                        <td width="2%"><?= $m->state ? '<span class="dashicons dashicons-visibility wp-modul3r-color-success"></span>' : '<span class="dashicons dashicons-hidden wp-modul3r-color-danger"></span>' ?></td>
-                        <td width="40%">
+                        <td><?= $m->state ? '<span class="dashicons dashicons-visibility wp-modul3r-color-success"></span>' : '<span class="dashicons dashicons-hidden wp-modul3r-color-danger"></span>' ?></td>
+                        <td>
                             <a href="<?= admin_url('admin.php?page='.WPMODUL3R_SLUG.'&edit='.$m->id) ?>">
                                 <?= $m->name ?>
                             </a>

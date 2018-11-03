@@ -1,5 +1,4 @@
 <?php
-/* Template Name: Article full width template */
 use App\Theme\Helper as _;
 
 get_header();

@@ -12,7 +12,7 @@ $firstNews = $latestNews->eq(0);
         <div class="container">
             <div class="column">
                 <h3 class="content__card__hl"><?= $contentCardModuleData->title ?></h3>
-                <a href="./11.case-blog-news.html" class="content__card__hl__link show-medium-up"><?= $contentCardModuleData->button ?></a>
+                <a href="#" class="content__card__hl__link show-medium-up"><?= $contentCardModuleData->button ?></a>
             </div>
         </div>
     </div>

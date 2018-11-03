@@ -127,6 +127,11 @@ class Helper
         return get_the_permalink();
     }
 
+    public static function linkCustomPostType($postType)
+    {
+        return get_post_type_archive_link( $postType );
+    }
+
     /**
      * Get featured image url
      *
@@ -314,5 +319,25 @@ class Helper
     public static function notNull($value)
     {
         return strlen(trim($value)) > 0;
+    }
+
+    /**
+     * Group by result data
+     *
+     * @param $name
+     * @param $object
+     * @return array
+     */
+    public static function groupBy($name, $object)
+    {
+        $result = [];
+
+        foreach($object as $key => $value) {
+            if (strstr($key, $name)) {
+                $result[] = $value;
+            }
+        }
+
+        return $result;
     }
 }

@@ -38,7 +38,7 @@ if(isset($_POST['submit'])) {
                 $additonalData = [];
                 $additonalData['module_id'] = $module_id;
                 $additonalData['field_key'] = $key;
-                $additonalData['field_value'] = $value;
+                $additonalData['field_value'] = str_replace('\\', '', $value);
 
                 $wpdb->insert($wpdb->prefix.'modul3r_data', $additonalData);
             }
