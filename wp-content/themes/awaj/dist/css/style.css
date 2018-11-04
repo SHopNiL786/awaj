@@ -3650,15 +3650,17 @@ button.swiper-pagination-bullet {
   padding-bottom: 1.875rem; }
 
 .blog__header__hl {
-  padding: 0.9375rem 0; }
+  padding: 0.9375rem 0 0; }
   .blog__header__hl a:after {
     content: none; }
 
 .blog__header__date {
   color: #9EA2CC; }
 
-.blog__header__meta a:after {
-  content: none; }
+.blog__header__meta {
+  padding-top: 0.9375rem; }
+  .blog__header__meta a:after {
+    content: none; }
 
 .blog__content__fig {
   margin-bottom: 1.875rem; }

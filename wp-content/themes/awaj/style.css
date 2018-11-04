@@ -14,3 +14,9 @@ Version: 1.0
 .partners__list__item a:after {
     content: none;
 }
+
+.button .icon {
+    margin-right: 5px;
+    position: relative;
+    top: 3px;
+}

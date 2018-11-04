@@ -368,4 +368,26 @@ class Helper
 
         return get_category_link($categoryId);
     }
+
+    /**
+     * Get attachment by post name (1920x500-latest-news)
+     *
+     * @param $post_name
+     * @return bool
+     */
+    public static function getAttachmentByPostName($post_name) {
+        $args = array(
+            'posts_per_page' => 1,
+            'post_type' => 'attachment',
+            'name' => trim( $post_name ),
+        );
+
+        $get_attachment = new \WP_Query( $args );
+
+        if ( ! $get_attachment || ! isset( $get_attachment->posts, $get_attachment->posts[0] ) ) {
+            return false;
+        }
+
+        return $get_attachment->posts[0];
+    }
 }

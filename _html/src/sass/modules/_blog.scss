@@ -11,7 +11,7 @@
 }
 
 .blog__header__hl {
-    padding: rem(15) 0;
+    padding: rem(15) 0 0;
 
     a:after {
         content: none;
@@ -24,6 +24,7 @@
 }
 
 .blog__header__meta {
+    padding-top: rem(15);
     @extend .text__small;
 
     a:after {

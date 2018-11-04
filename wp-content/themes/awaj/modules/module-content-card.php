@@ -3,7 +3,9 @@
 use App\Model\Post;
 use App\Theme\Helper as _;
 
-$latestNews = Post::where(['post_type' => 'post', 'posts_per_page' => 5, 'category_name' => $contentCardModuleData->categoryslug])->get();
+$categoryId = _::getCategoryIdByName('news');
+$categoryLink = _::getCategoryLink($categoryId);
+$latestNews = Post::where(['post_type' => 'post', 'posts_per_page' => 5, 'cat' => $categoryId])->get();
 
 $firstNews = $latestNews->eq(0);
 ?>
@@ -12,7 +14,7 @@ $firstNews = $latestNews->eq(0);
         <div class="container">
             <div class="column">
                 <h3 class="content__card__hl"><?= $contentCardModuleData->title ?></h3>
-                <a href="#" class="content__card__hl__link show-medium-up"><?= $contentCardModuleData->button ?></a>
+                <a href="<?= $categoryLink ?>" class="content__card__hl__link show-medium-up"><?= $contentCardModuleData->button ?></a>
             </div>
         </div>
     </div>
@@ -48,7 +50,7 @@ $firstNews = $latestNews->eq(0);
                         <?php endif; }); ?>
 
                         <div class="columns small-12 show-small-only">
-                            <a href="#" class="content__card__hl__link">See all news</a>
+                            <a href="<?= $categoryLink ?>" class="content__card__hl__link">See all news</a>
                         </div>
                     </div>
 

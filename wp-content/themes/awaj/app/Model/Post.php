@@ -65,6 +65,16 @@ class Post
     {
         return $this->result->posts[$index];
     }
+
+    /**
+     * All data
+     *
+     * @return mixed
+     */
+    public function all()
+    {
+        return $this->result->posts;
+    }
 }
 
 
