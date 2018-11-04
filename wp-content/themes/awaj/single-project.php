@@ -93,4 +93,6 @@ _::view('partial/inner', 'header-plain', $data);
 
 
 <?php
+_::view('partial/latest', 'news', ['theme' => 'bg-color-light']);
+
 get_footer('dark');

@@ -39,7 +39,8 @@ if ($featuredImage) {
     <!-- article -->
 
 <?php
-_::view('modules/module', 'project');
+_::view('partial/project', 'grid');
+_::view('partial/latest', 'news');
 
 $modules = w3r_get_modules($post->ID);
 

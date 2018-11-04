@@ -340,4 +340,32 @@ class Helper
 
         return $result;
     }
+
+    /**
+     * Get category id by name
+     *
+     * @param $name
+     * @return int
+     */
+    public static function getCategoryIdByName($name)
+    {
+        return get_cat_ID($name);
+    }
+
+    /**
+     * Get category link
+     *
+     * @param $arg
+     * @return string
+     */
+    public static function getCategoryLink($arg)
+    {
+        if (is_numeric($arg)) {
+            $categoryId = $arg;
+        } else {
+            $categoryId = self::getCategoryIdByName($arg);
+        }
+
+        return get_category_link($categoryId);
+    }
 }
