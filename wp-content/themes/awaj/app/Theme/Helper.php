@@ -345,11 +345,18 @@ class Helper
      * Get category id by name
      *
      * @param $name
+     * @param string $fieldName
      * @return int
      */
-    public static function getCategoryIdByName($name)
+    public static function getCategoryIdByName($name, $fieldName = 'name')
     {
-        return get_cat_ID($name);
+        $cat = get_term_by($fieldName, $name, 'category');
+
+        if ( $cat ) {
+            return $cat->term_id;
+        }
+
+        return 0;
     }
 
     /**

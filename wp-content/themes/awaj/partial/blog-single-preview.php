@@ -7,9 +7,11 @@
 <!--        <div class="blog__header__meta">by <bdi>--><?//= get_the_author() ?><!--</bdi></div>-->
     </div>
     <div class="blog__content">
+        <?php $featuredImageUrl = _::getFeaturedImageUrl('medium'); if ($featuredImageUrl) : ?>
         <figure class="blog__content__fig">
             <img src="<?= _::getFeaturedImageUrl('medium') ?>" alt="<?= _::title() ?>">
         </figure>
+        <?php endif; ?>
         <summary class="blog__content__text">
             <?= wp_trim_words( _::content(), 40, NULL ) ?>
         </summary>

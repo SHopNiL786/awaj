@@ -2,27 +2,46 @@
 use App\Theme\Helper as _;
 
 get_header();
-?>
 
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+	if (have_posts()) :
+		while (have_posts()) : the_post();
 
-	single post data
+			$data = [
+				'post' => new stdClass()
+			];
 
-<?php endwhile; ?>
+			$data['post']->post_title = _::title();
 
+			_::view('partial/inner', 'header-plain', $data);
+			?>
 
-	<div class="navigation">
-		<div class="next-posts"><?php next_posts_link(); ?></div>
-		<div class="prev-posts"><?php previous_posts_link(); ?></div>
-	</div>
+			<!-- article -->
+			<div class="container">
+				<div class="row">
+					<div class="columns large-8 large-offset-2">
+						<article class="article">
+							<?php $featuredImage = _::getFeaturedImageUrl(); if ($featuredImage) : ?>
+								<figure><img style="max-width: 100%" src="<?= $featuredImage ?>" alt="<?= $data['post']->post_title ?>"></figure>
+								<div class="spacer-50"></div>
+							<?php endif; ?>
 
-<?php else : ?>
+							<?php the_content(); ?>
+						</article>
+					</div>
+				</div>
+			</div>
+			<!-- article -->
 
-	<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-		<h2>Not Found</h2>
-	</div>
+			<?php
 
-<?php endif; ?>
+		endwhile;
+	else :
 
-<?php
-get_footer();
+		global $wp_query;
+		$wp_query->set_404();
+		status_header( 404 );
+		get_template_part( 404 ); exit();
+
+	endif;
+
+get_footer('dark');
