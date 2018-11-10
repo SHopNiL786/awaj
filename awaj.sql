@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 10, 2018 at 04:37 PM
+-- Generation Time: Nov 10, 2018 at 04:40 PM
 -- Server version: 5.6.26
 -- PHP Version: 5.6.12
 
@@ -109,8 +109,8 @@ CREATE TABLE IF NOT EXISTS `af_modul3r` (
 --
 
 INSERT INTO `af_modul3r` (`id`, `page_id`, `theme_key`, `name`, `module_order`, `state`, `structure_id`, `created_at`, `updated_at`) VALUES
-(1, 66, 'hero', 'Hero', 1, 1, 1, '2018-10-28 09:35:45', '2018-11-03 05:49:16'),
-(2, 66, 'content-primary', 'Who we are', 2, 1, 2, '2018-10-28 10:59:03', '2018-10-28 10:59:33'),
+(1, 66, 'hero', 'Hero', 1, 1, 1, '2018-10-28 09:35:45', '2018-11-10 15:39:44'),
+(2, 66, 'content-primary', 'Who we are', 2, 1, 2, '2018-10-28 10:59:03', '2018-11-10 15:40:07'),
 (3, 66, 'content-multi', 'Our Approach', 3, 1, 3, '2018-10-28 11:26:02', '2018-10-28 13:26:50'),
 (4, 66, 'content-card', 'Latest news', 4, 1, 4, '2018-10-28 15:18:20', '2018-10-28 15:28:00'),
 (5, 66, 'partner', 'Our partners', 5, 1, 5, '2018-10-28 18:17:23', '2018-10-29 10:25:44'),
@@ -146,14 +146,14 @@ INSERT INTO `af_modul3r_data` (`id`, `module_id`, `field_key`, `field_value`) VA
 (1, 1, 'maintext', 'Amplifying workers’ voices for decent working conditions in the apparel supply chain'),
 (2, 1, 'subtext', 'Awaj foundation'),
 (3, 1, 'button', 'Learn more'),
-(4, 1, 'buttonlink', '/about-us/'),
+(4, 1, 'buttonlink', '/about-us/our-story/'),
 (5, 1, 'background', '64'),
 (6, 1, 'foreground', '65'),
 (7, 2, 'header', 'An organization founded and led by garment sector workers'),
 (8, 2, 'subheader', 'Who we are'),
 (9, 2, 'body', 'Awaj Foundation is a grassroots labour rights NGO with over 600,000 worker members across Bangladesh. Through our trainings, services, expert support and advocacy, we aim to bring about greater empowerment of workers and harmonious industrial relations. We particularly focus on developing leadership among women workers, because when women take the lead, they can transform not only the garment sector, but our entire society towards greater equity and justice.'),
 (10, 2, 'button', 'Learn more'),
-(11, 2, 'buttonlink', '/about-us/'),
+(11, 2, 'buttonlink', '/about-us/our-story/'),
 (12, 2, 'theme', 'theme--dark'),
 (13, 3, 'header', 'Our Approach'),
 (14, 3, 'subtext', 'Awaj Foundation works to improve the lives of individual workers, and at the same time, catalyze structural changes across the industry'),
@@ -387,7 +387,7 @@ CREATE TABLE IF NOT EXISTS `af_options` (
   `option_name` varchar(191) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
   `option_value` longtext COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `autoload` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT 'yes'
-) ENGINE=InnoDB AUTO_INCREMENT=555 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=557 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
 -- Dumping data for table `af_options`
@@ -564,7 +564,9 @@ INSERT INTO `af_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (545, '_transient_timeout_settings_errors', '1541860117', 'no'),
 (546, '_transient_settings_errors', 'a:1:{i:0;a:4:{s:7:"setting";s:7:"general";s:4:"code";s:16:"settings_updated";s:7:"message";s:15:"Settings saved.";s:4:"type";s:7:"updated";}}', 'no'),
 (549, 'twitter_name', 'Awaj_fdn', 'yes'),
-(550, 'google_map_api_key', 'AIzaSyBz_LeMh2hWaph23bSlT8JlyFok2EB7fWM', 'yes');
+(550, 'google_map_api_key', 'AIzaSyBz_LeMh2hWaph23bSlT8JlyFok2EB7fWM', 'yes'),
+(555, '_transient_timeout_wpseo-statistics-totals', '1541950764', 'no'),
+(556, '_transient_wpseo-statistics-totals', 'a:1:{i:1;a:2:{s:6:"scores";a:1:{i:0;a:4:{s:8:"seo_rank";s:2:"na";s:5:"label";s:48:"Posts <strong>without</strong> a focus keyphrase";s:5:"count";s:1:"9";s:4:"link";s:97:"http://local.awaj.me/wp-admin/edit.php?post_status=publish&#038;post_type=post&#038;seo_filter=na";}}s:8:"division";a:5:{s:3:"bad";i:0;s:2:"ok";i:0;s:4:"good";i:0;s:2:"na";i:1;s:7:"noindex";i:0;}}}', 'no');
 
 -- --------------------------------------------------------
 
@@ -851,7 +853,7 @@ INSERT INTO `af_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (349, 65, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:350;s:6:"height";i:350;s:4:"file";s:27:"2018/10/hero-foreground.jpg";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:27:"hero-foreground-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:27:"hero-foreground-300x300.jpg";s:5:"width";i:300;s:6:"height";i:300;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
 (350, 66, '_edit_last', '1'),
 (351, 66, '_wp_page_template', 'front-page.php'),
-(352, 66, '_edit_lock', '1541862993:1'),
+(352, 66, '_edit_lock', '1541864284:1'),
 (353, 67, '_wp_attached_file', '2018/10/in-the-factory.jpg'),
 (354, 67, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:392;s:6:"height";i:244;s:4:"file";s:26:"2018/10/in-the-factory.jpg";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:26:"in-the-factory-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:26:"in-the-factory-300x187.jpg";s:5:"width";i:300;s:6:"height";i:187;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
 (355, 68, '_wp_attached_file', '2018/10/in-the-community.jpg'),
@@ -1873,7 +1875,7 @@ ALTER TABLE `af_modul3r_structure`
 -- AUTO_INCREMENT for table `af_options`
 --
 ALTER TABLE `af_options`
-  MODIFY `option_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=555;
+  MODIFY `option_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=557;
 --
 -- AUTO_INCREMENT for table `af_postmeta`
 --
