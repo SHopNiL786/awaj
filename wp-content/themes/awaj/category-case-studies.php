@@ -14,7 +14,7 @@ _::view('partial/inner', 'header', $data);
 
 $categoryId = _::getCategoryIdByName('case-studies', 'slug');
 $paged = get_query_var('page_val') ? get_query_var('page_val') : 1;
-$the_query = Post::fetch(['post_type' => 'post', 'posts_per_page' => 2, 'cat' => $categoryId, 'paged' => $paged]);
+$the_query = Post::fetch(['post_type' => 'post', 'posts_per_page' => 4, 'cat' => $categoryId, 'paged' => $paged]);
 ?>
 
     <!-- article -->
