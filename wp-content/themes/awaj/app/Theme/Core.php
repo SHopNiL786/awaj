@@ -112,6 +112,14 @@ class Core
             $filter->removeArchiveTitle();
         }
 
+        if(isset($array['send_yoast_to_bottom']) && $array['send_yoast_to_bottom'] == true) {
+            $filter->fixYoast();
+        }
+
+        if(isset($array['next_prev_button_class'])) {
+            $filter->addClassToNextPrev($array['next_prev_button_class']);
+        }
+
         return $this;
     }
 
@@ -125,6 +133,37 @@ class Core
     {
         $widget = new Widget();
         $widget->set($array)->register();
+
+        return $this;
+    }
+
+    /**
+     * Add theme settings page to admin
+     *
+     * @param array $settings
+     * @return $this
+     */
+    public function addThemeSettings($settings = [])
+    {
+        $themeSettings = new ThemeSettings($settings);
+        $themeSettings->createPage();
+
+        return $this;
+    }
+
+    /**
+     * Fix category 404 error
+     *
+     * @return $this
+     */
+    public function fixCategory404()
+    {
+        add_action('pre_get_posts', function($query){
+            if ($query->is_main_query() && !$query->is_feed() && !is_admin() && is_category()) {
+                $query->set('page_val', get_query_var('paged'));
+                $query->set('paged', 0);
+            }
+        });
 
         return $this;
     }

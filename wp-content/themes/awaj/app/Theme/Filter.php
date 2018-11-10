@@ -51,4 +51,37 @@ class Filter
 
         return $this;
     }
+
+    /**
+     * Send yoast to bottom
+     *
+     * @return $this
+     */
+    public function fixYoast()
+    {
+        add_filter( 'wpseo_metabox_prio', function(){
+            return 'low';
+        });
+
+        return $this;
+    }
+
+    /**
+     * Add class to next and prev button
+     *
+     * @param array $classArray
+     * @return $this
+     */
+    public function addClassToNextPrev($classArray = [])
+    {
+        add_filter('next_posts_link_attributes', function() use ($classArray) {
+            return 'class="'.$classArray['next'].'"';
+        });
+
+        add_filter('previous_posts_link_attributes', function() use ($classArray) {
+            return 'class="'.$classArray['prev'].'"';
+        });
+
+        return $this;
+    }
 }

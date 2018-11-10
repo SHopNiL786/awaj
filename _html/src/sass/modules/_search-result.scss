@@ -1,0 +1,27 @@
+.search__result {
+    padding: rem(40) 0;
+
+    @include breakpoint(large-up) {
+        padding: rem(80) 0;
+    }
+}
+
+.search__result__item {
+    padding-bottom: rem(40);
+
+    &:last-child {
+        padding-bottom: 0;
+    }
+}
+
+.search__result__item__link {
+    &:after {
+        content: none;
+    }
+}
+
+.search__result__item__text {
+    @extend .text__secondary;
+
+    padding-top: rem(15);
+}

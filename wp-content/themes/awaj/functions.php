@@ -19,9 +19,6 @@ $theme->injectAssets([
 ])
 ->addMenuLocations([
     'primary-menu' => 'Primary menu',
-    // 'secondary-menu' => 'Secondary menu',
-    // 'tertiary-menu' => 'Tertiary menu',
-    // 'social-menu' => 'Social menu',
 ])
 ->addCustomPostType([
     'staff' => [
@@ -63,64 +60,46 @@ $theme->injectAssets([
             'has_archive'   => true,
             'exclude_from_search' => false,
         ]
+    ],
+    'jobs' => [
+        'name' => 'Jobs',
+        'singular_name' => 'Job',
+        'arguments' => [
+            'description'   => 'All Jobs',
+            'public'        => true,
+            'menu_position' => 5,
+            'menu_icon'     => 'dashicons-id-alt',
+            'supports'      => array( 'title', 'editor' ),
+            'has_archive'   => true,
+            'exclude_from_search' => false,
+        ]
     ]
 ])
 ->addFilters([
     'excerpt_length' => 16,
     'remove_archive_title' => true,
-]);
-// ->addWidgets([
-//     [
-//         'name'          => 'Widget',
-//         'id'            => 'Widget-1',
-//         'before_widget' => '<aside>',
-//         'after_widget'  => '</aside>',
-//         'before_title'  => '<h3 class="rounded">',
-//         'after_title'   => '</h3>',
-//     ]
-// ]);
+    'send_yoast_to_bottom' => true,
+    'next_prev_button_class' => [
+        'next' => 'button button__primary button--small button--rounded',
+        'prev' => 'button button__primary__outline button--small button--rounded'
+    ]
+])
+->addThemeSettings([
+    'company_name'      => [ 'label' => 'Company name', 'type' => 'text' ],
+    'company_address'   => [ 'label' => 'Company address', 'type' => 'textarea' ],
+    'contact_number'    => [ 'label' => 'Contact number', 'type' => 'text' ],
+    'facebook_name'     => [ 'label' => 'Facebook page name', 'type' => 'text' ],
+    'facebook_url'      => [ 'label' => 'Facebook page URL', 'type' => 'text' ],
+    'twitter_name'      => [ 'label' => 'Twitter username', 'type' => 'text' ],
+    'twitter_url'       => [ 'label' => 'Twitter URL', 'type' => 'text' ],
+    'youtube_url'       => [ 'label' => 'YouTube channel URL', 'type' => 'text' ],
+    'google_map_api_key'=> [ 'label' => 'Google map API key', 'type' => 'text' ],
+    'google_map_lat'    => [ 'label' => 'Google map lat value', 'type' => 'text' ],
+    'google_map_lon'    => [ 'label' => 'Google map lon value', 'type' => 'text' ],
+])
+->fixCategory404();
+
 
 function dd($array) {
-    echo '<pre>';
-    print_r($array);
-    echo '</pre>';
+    w3r_dd($array);
 }
-
-/**
- * Yoast meta box priority change
- *
- * @return string
- */
-function yoasttobottom() {
-    return 'low';
-}
-add_filter( 'wpseo_metabox_prio', 'yoasttobottom');
-
-
-/**
- * Link class added for pagination
- */
-add_filter('next_posts_link_attributes', 'posts_link_attributes_1');
-add_filter('previous_posts_link_attributes', 'posts_link_attributes_2');
-
-function posts_link_attributes_2() {
-    return 'class="button button__primary__outline button--small button--rounded"';
-}
-function posts_link_attributes_1() {
-    return 'class="button button__primary button--small button--rounded"';
-}
-
-
-/**
- * Category 404 fix
- *
- * @param $query
- */
-function custom_pre_get_posts($query) {
-    if ($query->is_main_query() && !$query->is_feed() && !is_admin() && is_category()) {
-        $query->set('page_val', get_query_var('paged'));
-        $query->set('paged', 0);
-    }
-}
-
-add_action('pre_get_posts', 'custom_pre_get_posts');

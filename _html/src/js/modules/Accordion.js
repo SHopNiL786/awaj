@@ -1,6 +1,7 @@
 export class Accordion {
     constructor() {
         this.init();
+        this.preventClickOnBody();
     }
 
     init() {
@@ -8,6 +9,12 @@ export class Accordion {
             event.preventDefault();
 
             $(this).toggleClass('active');
+        });
+    }
+
+    preventClickOnBody() {
+        $('html').on('click', '.accordion__item__body', function(event) {
+            event.stopPropagation();
         });
     }
 }

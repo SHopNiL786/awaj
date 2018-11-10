@@ -16,6 +16,10 @@
             ?>
 
             <h2 class="inner__header__hl"><?= $headerPlainModuleData['post']->post_title ?></h2>
+
+            <?php if(isset($headerPlainModuleData['post']->sub_header_text)) : ?>
+            <p class="inner__header__text"><?= $headerPlainModuleData['post']->sub_header_text ?></p>
+            <?php endif; ?>
         </div>
     </div>
 </section>

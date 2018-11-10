@@ -1,4 +1,5 @@
 <?php
+/* Template Name: Article template */
 use App\Theme\Helper as _;
 
 get_header();
@@ -26,7 +27,7 @@ if ($featuredImage) {
     <!-- article -->
     <div class="container">
         <div class="row">
-            <div class="columns large-12">
+            <div class="columns large-8 large-offset-2">
 
                 <article class="article">
                     <?= apply_filters('the_content', $post->post_content) ?>

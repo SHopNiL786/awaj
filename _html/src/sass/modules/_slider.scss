@@ -711,6 +711,14 @@ button.swiper-pagination-bullet {
             outline: none;
         }
     }
+
+    .swiper-slide > a:after {
+        content: none;
+    }
+
+    .partners__list__item {
+        min-height: rem(73);
+    }
 }
 
 .slider__carousel__hl {

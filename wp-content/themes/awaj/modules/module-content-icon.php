@@ -1,5 +1,7 @@
+<?php use App\Theme\Helper as _; ?>
     <!-- content icon -->
-    <section class="content__icon theme--dark">
+    <section class="content__icon<?= _::notNull($contentIconModuleData->theme) ? ' '.$contentIconModuleData->theme : '' ?>">
+        <?php if(_::notNull($contentIconModuleData->header)) : ?>
         <div class="content__icon__header">
             <div class="container">
                 <div class="column">
@@ -8,6 +10,7 @@
                 </div>
             </div>
         </div>
+        <?php endif; ?>
 
         <div class="content__icon__body">
             <div class="container">

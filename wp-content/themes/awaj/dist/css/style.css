@@ -1535,7 +1535,7 @@ h6, .h6, .avatar__hl, .gmap__text__hl {
   font-size: 1rem;
   line-height: 1.75rem; }
 
-p, .text__secondary, .content__multi__col__body__detail__text, .footer__back-to-top, .content__img__text, .content__img__text p, .article h6 + p, .accordion__item__body h6 + p, .card__text, .card__container__link, .avatar__text, .blog__content__text, .blog__content__link, .accordion__item__body p, .gmap__text__primary {
+p, .text__secondary, .content__multi__col__body__detail__text, .footer__back-to-top, .content__img__text, .content__img__text p, .article h6 + p, .accordion__item__body h6 + p, .card__text, .card__container__link, .avatar__text, .blog__content__text, .blog__content__link, .accordion__item__body p, .gmap__text__primary, .search__result__item__text {
   font-size: 0.875rem;
   line-height: 1.625rem; }
 
@@ -3426,6 +3426,10 @@ button.swiper-pagination-bullet {
     .slider__carousel .swiper-pagination .swiper-pagination-bullet {
       margin: 0 0.1875rem;
       outline: none; }
+  .slider__carousel .swiper-slide > a:after {
+    content: none; }
+  .slider__carousel .partners__list__item {
+    min-height: 4.5625rem; }
 
 .slider__carousel__hl {
   padding-bottom: 1.875rem; }
@@ -3854,6 +3858,23 @@ button.swiper-pagination-bullet {
     font-size: 0.875rem; }
     .general__aside__social ul a:after {
       content: none; }
+
+.search__result {
+  padding: 2.5rem 0; }
+  @media (min-width: 1024px) {
+    .search__result {
+      padding: 5rem 0; } }
+
+.search__result__item {
+  padding-bottom: 2.5rem; }
+  .search__result__item:last-child {
+    padding-bottom: 0; }
+
+.search__result__item__link:after {
+  content: none; }
+
+.search__result__item__text {
+  padding-top: 0.9375rem; }
 
 @media (max-width: 639px) {
   .is--for-large {

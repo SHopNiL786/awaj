@@ -169,6 +169,17 @@ class Helper
     }
 
     /**
+     * Show limited content
+     *
+     * @param int $numberOfWord
+     * @return string
+     */
+    public static function limitedContent($numberOfWord = 40)
+    {
+        return wp_trim_words( self::content(), $numberOfWord, NULL );
+    }
+
+    /**
      * Get custom field
      *
      * @param  array or string $argument
@@ -382,7 +393,8 @@ class Helper
      * @param $post_name
      * @return bool
      */
-    public static function getAttachmentByPostName($post_name) {
+    public static function getAttachmentByPostName($post_name)
+    {
         $args = array(
             'posts_per_page' => 1,
             'post_type' => 'attachment',
@@ -397,4 +409,16 @@ class Helper
 
         return $get_attachment->posts[0];
     }
+
+    /**
+     * Get option
+     *
+     * @param $name
+     * @return mixed|void
+     */
+    public static function themeSettingsValue($name)
+    {
+        return get_option($name);
+    }
+
 }
