@@ -4,6 +4,7 @@ import { News } from './modules/News';
 import { Slider } from './modules/Slider';
 import { Url } from './modules/Url';
 import { Accordion } from './modules/Accordion';
+import { Animation } from './modules/Animation';
 
 jQuery(document).ready(function($) {
     new Header();
@@ -12,4 +13,5 @@ jQuery(document).ready(function($) {
     new Slider();
     new Url();
     new Accordion();
+    new Animation();
 });

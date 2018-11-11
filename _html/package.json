@@ -28,6 +28,7 @@
   "dependencies": {
     "hamburgers": "^0.9.3",
     "roolith-css": "^1.5.1",
+    "sal.js": "^0.5.0",
     "swiper": "^4.4.1"
   }
 }

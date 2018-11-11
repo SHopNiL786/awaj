@@ -14,7 +14,7 @@
         <div class="container">
 
             <div class="row">
-                <div class="columns small-12 medium-6 large-4">
+                <div class="columns small-12 medium-6 large-4" data-sal="fade">
 
                     <div class="content__card__item">
                         <figure class="content__card__item__fig" style="background-image: url('<?= $contentMultiModuleData->column1_image['url'] ?>')"></figure>
@@ -29,7 +29,7 @@
                     </div>
 
                 </div>
-                <div class="columns small-12 medium-6 large-4">
+                <div class="columns small-12 medium-6 large-4" data-sal="fade" data-sal-delay="200">
 
                     <div class="content__card__item">
                         <figure class="content__card__item__fig" style="background-image: url('<?= $contentMultiModuleData->column2_image['url'] ?>')"></figure>
@@ -44,7 +44,7 @@
                     </div>
 
                 </div>
-                <div class="columns small-12 medium-6 large-4">
+                <div class="columns small-12 medium-6 large-4" data-sal="fade" data-sal-delay="400">
 
                     <div class="content__card__item">
                         <figure class="content__card__item__fig" style="background-image: url('<?= $contentMultiModuleData->column3_image['url'] ?>')"></figure>

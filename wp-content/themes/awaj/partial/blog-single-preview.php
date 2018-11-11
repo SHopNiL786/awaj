@@ -1,6 +1,6 @@
 <?php use App\Theme\Helper as _; ?>
 <!-- Blog -->
-<section class="blog">
+<section class="blog" data-sal="slide-up">
     <div class="blog__header">
         <time class="blog__header__date" datetime="<?= get_the_date('c') ?>"><?= get_the_date() ?></time>
         <h5 class="blog__header__hl"><a href="<?= _::link() ?>"><?= _::title() ?></a></h5>

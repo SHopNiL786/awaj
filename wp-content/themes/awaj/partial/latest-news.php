@@ -28,7 +28,7 @@ $latestNews = Post::where(['post_type' => 'post', 'posts_per_page' => 4, 'cat' =
 
                     <a href="<?= _::link($post->ID) ?>" class="content__card__item">
                         <figure class="content__card__item__fig" style="background-image: url('<?= _::getFeaturedImageUrl('full', $post->ID) ?>')"></figure>
-                        <div class="content__card__item__body">
+                        <div class="content__card__item__body" data-sal="slide-up">
                             <time class="content__card__item__meta" datetime="<?= $post->post_date ?>"><?= _::formatDate($post->post_date) ?></time>
                             <h6 class="content__card__item__hl"><?= $post->post_title ?></h6>
                         </div>

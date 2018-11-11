@@ -20,7 +20,7 @@ _::view('partial/inner', 'header-plain', $data);
             <div class="row">
 
                 <?php if (isset($customField->duration_of_project)) : ?>
-                <div class="columns large-4">
+                <div class="columns large-4" data-sal="slide-left" data-sal-delay="500">
                     <h6 class="meta__hl">Duration of project</h6>
                     <p class="meta__text">
                         <?php
@@ -36,7 +36,7 @@ _::view('partial/inner', 'header-plain', $data);
                 <?php endif; ?>
 
                 <?php if (isset($customField->donors)) : ?>
-                <div class="columns large-4">
+                <div class="columns large-4" data-sal="slide-left" data-sal-delay="600">
                     <h6 class="meta__hl">Donor</h6>
                     <p class="meta__text">
                         <?= $customField->donors ?>
@@ -45,7 +45,7 @@ _::view('partial/inner', 'header-plain', $data);
                 <?php endif; ?>
 
                 <?php if (isset($customField->partners)) : ?>
-                <div class="columns large-4">
+                <div class="columns large-4" data-sal="slide-left" data-sal-delay="700">
                     <h6 class="meta__hl">Partner(s)</h6>
                     <p class="meta__text">
                         <?= $customField->partners ?>

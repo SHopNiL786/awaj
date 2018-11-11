@@ -31,7 +31,7 @@ $jobs = Post::where(['post_type' => 'jobs', 'posts_per_page' => -1])->get();
     <?php if ($jobs->hasPost()) : ?>
     <section class="job">
         <div class="container">
-            <div class="column">
+            <div class="column" data-sal="fade">
 
                 <h4 class="job__hl">Current openings</h4>
                 <ul class="accordion">

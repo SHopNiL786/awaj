@@ -40,7 +40,7 @@ if (count($categories) > 0) :
                         $staffs->each(function($staff){
                             ?>
                             <a href="<?= _::link($staff->ID) ?>" class="avatar__link">
-                                <figure class="avatar" style="background-image: url('<?= _::getFeaturedImageUrl('full', $staff->ID) ?>')">
+                                <figure class="avatar" style="background-image: url('<?= _::getFeaturedImageUrl('full', $staff->ID) ?>')" data-sal="fade">
                                     <figcaption class="avatar__caption">
                                         <span class="avatar__hl"><?= $staff->post_title ?></span>
                                         <span class="avatar__text"><?= get_field( 'designation', $staff->ID ) ?></span>

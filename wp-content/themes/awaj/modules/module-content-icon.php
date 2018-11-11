@@ -17,7 +17,7 @@
                 <div class="row">
                     
                     <?php for($i = 1; $i <= 3; $i++) : ?>
-                        <div class="columns large-4">
+                        <div class="columns large-4" data-sal="slide-left" data-sal-delay="<?= $i * 100 ?>">
 
                             <div class="content__icon__body__item">
                                 <i class="icon content__icon__body__item__icon">

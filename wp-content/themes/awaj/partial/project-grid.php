@@ -15,7 +15,7 @@ if ($projects->hasPost()) :
             </div>
             <?php $projects->each(function($project) { ?>
                 <div class="columns medium-6 large-4">
-                    <section class="card">
+                    <section class="card" data-sal="fade">
                         <a href="<?= _::link($project->ID) ?>" class="card__link">
                             <figure class="card__fig"><img src="<?= _::getFeaturedImageUrl('full', $project->ID) ?>" alt="<?= $project->post_title ?>"></figure>
                         </a>

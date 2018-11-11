@@ -29,14 +29,14 @@ if ($featuredImage) {
             <div class="row">
                 <div class="columns large-8">
 
-                    <article class="article">
+                    <article class="article" data-sal="fade">
                         <?= apply_filters('the_content', $post->post_content) ?>
                     </article>
 
                 </div>
                 <div class="columns large-3 large-offset-1">
 
-                    <aside class="general__aside">
+                    <aside class="general__aside" data-sal="fade" data-sal-delay="200">
                         <h6 class="general__aside__hl">
                             <i class="icon">
                                 <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
