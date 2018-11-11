@@ -217,12 +217,12 @@ class Helper
      */
     public static function getPageTitle()
     {
-        $string = wp_title(' ', false);
-        if($string) {
-            $string .= ' &raquo; ';
-        }
-
-        $string .= get_bloginfo('name');
+        $string = wp_title('');
+//        if($string) {
+//            $string .= ' &raquo; ';
+//        }
+//
+//        $string .= get_bloginfo('name');
 
         return $string;
     }

@@ -6,10 +6,10 @@ use App\Theme\Core;
 $theme = new Core();
 $theme->injectAssets([
     'styles' => [
-        'main-style' => '/dist/css/style.css@1.0',
+        'main-style' => '/dist/css/style.min.css@1.0',
     ],
     'js' => [
-        'main-js' => '/dist/js/app.js@1.0',
+        'main-js' => '/dist/js/app.min.js@1.0',
     ],
 ])
 ->addSupports([
@@ -97,7 +97,8 @@ $theme->injectAssets([
     'google_map_lat'    => [ 'label' => 'Google map lat value', 'type' => 'text' ],
     'google_map_lon'    => [ 'label' => 'Google map lon value', 'type' => 'text' ],
 ])
-->fixCategory404();
+->fixCategory404()
+->completelyDisableRestAPI();
 
 
 function dd($array) {

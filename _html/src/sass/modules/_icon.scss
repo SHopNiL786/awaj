@@ -4,7 +4,10 @@
 
     svg {
         width: 100%;
-        fill: currentColor;
+
+        &:not(.no--fill) {
+            fill: currentColor;
+        }
 
         .theme--dark & {
             fill: $color-white;

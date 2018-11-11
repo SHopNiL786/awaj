@@ -2281,8 +2281,9 @@ a.content__card__item:hover .content__card__item__fig:after {
   display: inline-block;
   width: 1.125rem; }
   .icon svg {
-    width: 100%;
-    fill: currentColor; }
+    width: 100%; }
+    .icon svg:not(.no--fill) {
+      fill: currentColor; }
     .theme--dark .icon svg {
       fill: #ffffff; }
 

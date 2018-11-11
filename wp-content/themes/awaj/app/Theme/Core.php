@@ -167,4 +167,40 @@ class Core
 
         return $this;
     }
+
+    /**
+     * Disable user API
+     */
+    public function disableUserAPI()
+    {
+        add_filter( 'rest_endpoints', function( $endpoints ){
+            if ( isset( $endpoints['/wp/v2/users'] ) ) {
+                unset( $endpoints['/wp/v2/users'] );
+            }
+            if ( isset( $endpoints['/wp/v2/users/(?P<id>[\d]+)'] ) ) {
+                unset( $endpoints['/wp/v2/users/(?P<id>[\d]+)'] );
+            }
+            return $endpoints;
+        });
+
+        return $this;
+    }
+
+    /**
+     * Disable Rest API access
+     *
+     * @return $this
+     */
+    public function completelyDisableRestAPI()
+    {
+        add_filter( 'rest_authentication_errors', function(){
+            return new \WP_Error( 'Forbidden', 'The request was valid, but the server is refusing action. The user might not have the necessary permissions for a resource, or may need an account of some sort.', array( 'status' => 403 ) );
+        } );
+
+        remove_action( 'wp_head', 'rest_output_link_wp_head' );
+        remove_action( 'wp_head', 'wp_oembed_add_discovery_links' );
+        remove_action( 'template_redirect', 'rest_output_link_header' );
+
+        return $this;
+    }
 }

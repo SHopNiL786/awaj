@@ -6,6 +6,7 @@ use App\Theme\Helper as _;
 <head>
 	<meta charset="<?= _::getMetaCharset() ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico">
 	<title><?= _::getPageTitle() ?></title>
 	<?php wp_head(); ?>
     <script>window.jQuery = window.$ = jQuery;</script>
