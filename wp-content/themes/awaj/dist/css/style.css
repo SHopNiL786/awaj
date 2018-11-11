@@ -3508,7 +3508,8 @@ button.swiper-pagination-bullet {
       padding-bottom: 1.25rem; } }
 
 .content__icon__body__item__icon {
-  width: 3.75rem; }
+  width: 3.75rem;
+  color: #2E3191; }
   .content__icon__body__item__icon svg {
     fill: #2E3191; }
 
