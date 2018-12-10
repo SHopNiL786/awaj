@@ -22,16 +22,7 @@ _::view('partial/inner', 'header-plain', $data);
                 <?php if (isset($customField->duration_of_project)) : ?>
                 <div class="columns large-4" data-sal="slide-left" data-sal-delay="500">
                     <h6 class="meta__hl">Duration of project</h6>
-                    <p class="meta__text">
-                        <?php
-                            echo $customField->duration_of_project;
-                            if ($customField->duration_of_project > 1) {
-                                echo ' months';
-                            } else {
-                                echo ' month';
-                            }
-                        ?>
-                    </p>
+                    <p class="meta__text"><?= $customField->duration_of_project ?></p>
                 </div>
                 <?php endif; ?>
 

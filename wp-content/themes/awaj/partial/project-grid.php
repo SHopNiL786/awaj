@@ -13,6 +13,9 @@ if ($projects->hasPost()) :
                 <h3 class="card__container__hl">Our projects</h3>
                 <a href="<?= _::linkCustomPostType('project') ?>" class="card__container__link is--for-medium">See all projects</a>
             </div>
+        </div>
+
+        <div class="row">
             <?php $projects->each(function($project) { ?>
                 <div class="columns medium-6 large-4">
                     <section class="card" data-sal="fade">
@@ -26,6 +29,9 @@ if ($projects->hasPost()) :
                     </section>
                 </div>
             <?php }); ?>
+        </div>
+
+        <div class="row">
             <div class="columns large-12">
                 <a href="<?= _::linkCustomPostType('project') ?>" class="card__container__link is--for-small">See all projects</a>
             </div>

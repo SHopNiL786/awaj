@@ -75,6 +75,18 @@
     @include breakpoint(large-up) {
         padding: rem(65) 0 rem(30);
     }
+
+    .medium-6:nth-child(2n+1) {
+        @include breakpoint(medium-only) {
+            clear: left;
+        }
+    }
+
+    .large-4:nth-child(3n+1) {
+        @include breakpoint(large-up) {
+            clear: left;
+        }
+    }
 }
 
 .card__container__hl {

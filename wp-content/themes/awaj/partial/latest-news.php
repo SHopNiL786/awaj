@@ -24,7 +24,7 @@ $latestNews = Post::where(['post_type' => 'post', 'posts_per_page' => 4, 'cat' =
         <div class="container">
             <div class="row">
                 <?php $latestNews->each(function($post){ ?>
-                <div class="columns large-3">
+                <div class="columns medium-6 large-3">
 
                     <a href="<?= _::link($post->ID) ?>" class="content__card__item">
                         <figure class="content__card__item__fig" style="background-image: url('<?= _::getFeaturedImageUrl('full', $post->ID) ?>')"></figure>
