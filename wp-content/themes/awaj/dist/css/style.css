@@ -1878,7 +1878,7 @@ input, textarea, select {
         .nav > li > ul a:hover {
           color: #9EA2CC; }
       .nav > li > ul ul {
-        padding-left: 1.25rem; }
+        padding-left: 1.0625rem; }
     .nav > li:hover ul,
     .nav > li.on-hover ul {
       display: block; }
@@ -1901,6 +1901,8 @@ input, textarea, select {
       line-height: 1.25rem; }
       .nav__footer ul li a:after, .blog__aside__nav ul li a:after {
         display: none; }
+    .nav__footer ul li ul, .blog__aside__nav ul li ul {
+      padding: 0.625rem 0 0 0.9375rem; }
   .nav__footer .icon, .blog__aside__nav .icon {
     position: relative;
     top: 0.25rem; }

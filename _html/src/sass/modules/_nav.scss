@@ -156,7 +156,7 @@
             }
 
             ul {
-                padding-left: rem(20);
+                padding-left: rem(17);
             }
         }
 
@@ -195,6 +195,10 @@
                 &:after {
                     display: none;
                 }
+            }
+
+            ul {
+                padding: rem(10) 0 0 rem(15);
             }
         }
     }
