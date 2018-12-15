@@ -39,8 +39,13 @@ if ($featuredImage) {
     <!-- article -->
 
 <?php
-_::view('partial/project', 'grid');
-_::view('partial/latest', 'news');
+$pojects = _::acfField('projects', $post->ID);
+
+if ($pojects && count($pojects) > 0) {
+    _::view('partial/project', 'grid', $pojects);
+}
+
+//_::view('partial/latest', 'news');
 
 $modules = w3r_get_modules($post->ID);
 

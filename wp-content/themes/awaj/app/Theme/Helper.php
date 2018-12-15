@@ -292,7 +292,10 @@ class Helper
             $value = get_field($fieldName);
         }
 
-        if (strlen(trim($value)) > 0) {
+        if (is_array($value)) {
+            return $value;
+        }
+        else if (strlen(trim($value)) > 0) {
             return $value;
         }
 

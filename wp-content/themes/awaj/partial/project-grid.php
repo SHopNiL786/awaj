@@ -2,7 +2,7 @@
 use App\Model\Post;
 use App\Theme\Helper as _;
 
-$projects = Post::where(['post_type' => 'project', 'posts_per_page' => 6])->get();
+$projects = Post::where(['post_type' => 'project', 'posts_per_page' => 6, 'post__in' => $gridModuleData])->get();
 if ($projects->hasPost()) :
 ?>
 <!-- our project -->
@@ -10,8 +10,8 @@ if ($projects->hasPost()) :
     <div class="container">
         <div class="row">
             <div class="columns large-12">
-                <h3 class="card__container__hl">Our projects</h3>
-                <a href="<?= _::linkCustomPostType('project') ?>" class="card__container__link is--for-medium">See all projects</a>
+                <h3 class="card__container__hl">Related projects</h3>
+                <a href="<?= _::linkCustomPostType('project') ?>" class="card__container__link is--for-medium">See all other projects</a>
             </div>
         </div>
 
