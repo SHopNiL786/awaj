@@ -2629,18 +2629,18 @@ a.content__card__item:hover .content__card__item__fig:after {
   @media (min-width: 640px) {
     .content__img__main {
       float: right;
-      margin: 0 0 0 3.75rem;
+      margin: 1.875rem 0 3.75rem 3.75rem;
       padding-bottom: 0; } }
   @media (min-width: 1024px) {
     .content__img__main {
-      margin: 0 0 0 10rem; } }
+      margin: 5rem 0 10rem 10rem; } }
   @media (min-width: 640px) {
     .content__img--alternate .content__img__main {
       float: left;
-      margin: 0 3.75rem 0 0; } }
+      margin: 1.875rem 3.75rem 3.75rem 0; } }
   @media (min-width: 1024px) {
     .content__img--alternate .content__img__main {
-      margin: 0 10rem 0 0; } }
+      margin: 5rem 10rem 10rem 0; } }
 
 .content__img__hl {
   padding-bottom: 0.9375rem; }

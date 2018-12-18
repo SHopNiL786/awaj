@@ -25,19 +25,23 @@ if ($featuredImage) {
 }
 ?>
 
-    <!-- article -->
-    <div class="container">
-        <div class="row">
-            <div class="columns large-12">
-                <article class="article">
-                    <?= apply_filters('the_content', $post->post_content) ?>
-                </article>
+    <?php if (_::notNull($post->post_content)) : ?>
+        <!-- article -->
+        <div class="container">
+            <div class="row">
+                <div class="columns large-12">
+
+                    <article class="article">
+                        <?= apply_filters('the_content', $post->post_content) ?>
+                    </article>
+
+                </div>
             </div>
         </div>
-    </div>
-    <!-- article -->
+        <!-- article -->
 
-    <div class="spacer-50"></div>
+        <div class="spacer-50"></div>
+    <?php endif; ?>
 
 <?php
     $reports = Post::where([
@@ -47,6 +51,8 @@ if ($featuredImage) {
         'orderby' => 'meta_value',
         'order' => 'DESC'
     ])->get();
+
+if ($reports->hasPost()) :
 ?>
 
     <!-- Items -->
@@ -79,4 +85,5 @@ if ($featuredImage) {
     <div class="spacer-100"></div>
 
 <?php
+endif;
 get_footer('dark');

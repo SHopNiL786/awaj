@@ -15,22 +15,22 @@
 
     @include breakpoint(medium-up) {
         float: right;
-        margin: 0 0 0 rem(60);
+        margin: rem(30) 0 rem(60) rem(60);
         padding-bottom: 0;
     }
 
     @include breakpoint(large-up) {
-        margin: 0 0 0 rem(160);
+        margin: rem(80) 0 rem(160) rem(160);
     }
 
     .content__img--alternate & {
         @include breakpoint(medium-up) {
             float: left;
-            margin: 0 rem(60) 0 0;
+            margin: rem(30) rem(60) rem(60) 0;
         }
 
         @include breakpoint(large-up) {
-            margin: 0 rem(160) 0 0;
+            margin: rem(80) rem(160) rem(160) 0;
         }
     }
 }

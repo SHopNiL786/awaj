@@ -32,6 +32,7 @@ use App\Theme\Helper as _;
         </a>
 
         <h6 class="nav__footer__hl">Contact us</h6>
-        <?php _::showMenu('primary-menu', ['submenu' => 'Contact us']); ?>
+        <p><small><?= _::themeSettingsValue('company_address'); ?></small></p>
+        <p><small><a href="tel:<?= _::themeSettingsValue('contact_number'); ?>"><?= _::themeSettingsValue('contact_number'); ?></a></small></p>
     </div>
 </div>

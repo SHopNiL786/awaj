@@ -23,8 +23,25 @@ if ($featuredImage) {
 
     _::view('partial/inner', 'header-plain', $data);
 }
+?>
 
+<?php if (_::notNull($post->post_content)) : ?>
+    <!-- article -->
+    <div class="container">
+        <div class="row">
+            <div class="columns large-12">
 
+                <article class="article">
+                    <?= apply_filters('the_content', $post->post_content) ?>
+                </article>
+
+            </div>
+        </div>
+    </div>
+    <!-- article -->
+<?php endif; ?>
+
+<?php
 $jobs = Post::where(['post_type' => 'jobs', 'posts_per_page' => -1])->get();
 ?>
 

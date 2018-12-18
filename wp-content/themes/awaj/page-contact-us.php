@@ -29,7 +29,7 @@ if ($featuredImage) {
             <div class="row">
                 <div class="columns large-8">
 
-                    <article class="article" data-sal="fade">
+                    <article class="article">
                         <?= apply_filters('the_content', $post->post_content) ?>
                     </article>
 

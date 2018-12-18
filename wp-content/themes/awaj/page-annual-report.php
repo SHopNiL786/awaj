@@ -22,6 +22,22 @@ $reports = Post::where([
 ])->get();
 ?>
 
+    <?php if (_::notNull($post->post_content)) : ?>
+    <!-- article -->
+    <div class="container">
+        <div class="row">
+            <div class="columns large-12">
+
+                <article class="article">
+                    <?= apply_filters('the_content', $post->post_content) ?>
+                </article>
+
+            </div>
+        </div>
+    </div>
+    <!-- article -->
+    <?php endif; ?>
+
     <section class="item__container">
         <div class="container">
             <div class="column">
