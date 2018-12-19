@@ -12,7 +12,8 @@ $data['post']->post_title = 'All projects';
 
 _::view('partial/inner', 'header-plain', $data);
 
-$projects = Post::where(['post_type' => 'project'])->get();
+$projects = Post::where(['post_type' => 'project', 'posts_per_page' => 30])->get();
+
 if ($projects->hasPost()) :
 ?>
 
