@@ -59,7 +59,7 @@
 
 .nav {
     margin-left: 0;
-    max-height: 78vh;
+    max-height: 77vh;
     overflow: auto;
 
     @include breakpoint(large-up) {
@@ -68,7 +68,7 @@
     }
 
     .header--compact & {
-        max-height: 80vh;
+        max-height: 79vh;
 
         @include breakpoint(large-up) {
             max-height: none;

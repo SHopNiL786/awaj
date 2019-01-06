@@ -44,8 +44,10 @@ export class Header {
 
             if ($(this).hasClass('is-active') === true) {
                 $(this).closest('.header').find('.header__nav').addClass('is--active');
+                $('body').addClass('is--no-scroll');
             } else {
                 $(this).closest('.header').find('.header__nav').removeClass('is--active');
+                $('body').removeClass('is--no-scroll');
             }
         });
     }

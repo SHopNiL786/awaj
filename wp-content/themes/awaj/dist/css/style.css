@@ -1808,14 +1808,14 @@ input, textarea, select {
 
 .nav {
   margin-left: 0;
-  max-height: 78vh;
+  max-height: 77vh;
   overflow: auto; }
   @media (min-width: 1024px) {
     .nav {
       max-height: none;
       overflow: visible; } }
   .header--compact .nav {
-    max-height: 80vh; }
+    max-height: 79vh; }
     @media (min-width: 1024px) {
       .header--compact .nav {
         max-height: none; } }
@@ -2161,7 +2161,7 @@ a.content__card__item:hover .content__card__item__fig:after {
   border-top: 0.0625rem solid #F6F9FC;
   padding: 1.25rem 0 0.625rem; }
   .theme--dark .header__nav {
-    border-color: #9EA2CC; }
+    border-color: #484e89; }
   .header__nav.is--active {
     display: block; }
   @media (min-width: 1024px) {
@@ -2173,7 +2173,8 @@ a.content__card__item:hover .content__card__item__fig:after {
       padding-bottom: 0;
       float: right; } }
   .header--compact .header__nav {
-    padding-top: 0.4375rem; }
+    padding-top: 0.4375rem;
+    padding-top: 1.25rem; }
 
 .header--fixed {
   position: fixed;
@@ -4382,6 +4383,10 @@ button.swiper-pagination-bullet {
   width: 100%; }
   .img-full-width img {
     max-width: 100%; }
+
+.is--no-scroll {
+  position: relative;
+  overflow: hidden; }
 
 .module {
   padding: 20px;

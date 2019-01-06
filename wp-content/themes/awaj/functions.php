@@ -6,10 +6,10 @@ use App\Theme\Core;
 $theme = new Core();
 $theme->injectAssets([
     'styles' => [
-        'main-style' => '/dist/css/style.min.css@1.0',
+        'main-style' => '/dist/css/style.min.css@1.0.1',
     ],
     'js' => [
-        'main-js' => '/dist/js/app.min.js@1.0',
+        'main-js' => '/dist/js/app.min.js@1.0.1',
     ],
 ])
 ->addSupports([

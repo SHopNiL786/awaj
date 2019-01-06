@@ -31,3 +31,8 @@
         max-width: 100%;
     }
 }
+
+.is--no-scroll {
+    position: relative;
+    overflow: hidden;
+}
