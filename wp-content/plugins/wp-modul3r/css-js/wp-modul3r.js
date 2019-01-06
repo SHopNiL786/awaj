@@ -67,6 +67,21 @@ var WPModul3r = (function($, document, window, undefined){
      */
     var wpMediaUploader = function() {
 
+        $('html').on('click', '.wp-modul3r-field-media-reset', function(e){
+            e.preventDefault();
+
+            if (confirm('You are sure?')) {
+                var $container = $(this).closest('.wp-modul3r-field-media');
+                $container.find('.wp-modul3r-field-media-preview').html('');
+                $container.find('.wp-modul3r-field-media-input').val('');
+
+                var name = $container.find('.wp-modul3r-field-media-input').attr('name');
+                if ($('input[name="'+ name +'_link"]').length > 0) {
+                    $('input[name="'+ name +'_link"]').val('');
+                }
+            }
+        });
+
         $('html').on('click', '.wp-modul3r-field-media-opener', function(e) {
             e.preventDefault();
             var image_frame;

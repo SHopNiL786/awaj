@@ -3,7 +3,7 @@
 use App\Model\Post;
 use App\Theme\Helper as _;
 
-$categoryId = _::getCategoryIdByName('news');
+$categoryId = _::getCategoryIdByName($contentCardModuleData->categoryslug);
 $categoryLink = _::getCategoryLink($categoryId);
 $latestNews = Post::where(['post_type' => 'post', 'posts_per_page' => 5, 'cat' => $categoryId])->get();
 

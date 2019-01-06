@@ -2173,8 +2173,7 @@ a.content__card__item:hover .content__card__item__fig:after {
       padding-bottom: 0;
       float: right; } }
   .header--compact .header__nav {
-    padding-top: 0.4375rem;
-    padding-top: 1.25rem; }
+    padding-top: 0.4375rem; }
 
 .header--fixed {
   position: fixed;

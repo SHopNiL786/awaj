@@ -78,6 +78,7 @@ $pages = $wpdb->get_results("SELECT ID, post_title FROM $wpdb->posts WHERE post_
                             echo '</div>';
                             echo '<input type="hidden" name="_'.$fieldKey.'" class="wp-modul3r-field-media-input" value="'.$value.'">';
                             echo '<input type="button" class="button wp-modul3r-field-media-opener" value="Upload or Select '.wpModul3rSlugToText($fieldKey).'">';
+                            echo ' <input type="button" class="button wp-modul3r-field-media-reset" value="Clear">';
                             echo '</div>';
                         }
                         elseif($fieldType == 'html') {
