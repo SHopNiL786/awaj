@@ -22,7 +22,7 @@ if (count($modules) > 0) {
     }
 }
 
-$data = w3r_get_module("partner", "66");
+$data = w3r_get_module("partner", "frontpage");
 $data->theme = 'theme--white';
 $data->title = false;
 

@@ -56,7 +56,11 @@ function w3r_get_module($theme_key = null, $page = null, $debug = false) {
     }
 
     if(!is_numeric($page)) {
-        $page = w3rGetIdBySlug($page);
+        if ($page == 'frontpage' || $page == 'home') {
+            $page = w3rGetFrontpageId();
+        } else {
+            $page = w3rGetIdBySlug($page);
+        }
     }
 
     $data = new stdClass();
@@ -135,7 +139,11 @@ function w3r_get_modules($page = null) {
     }
 
     if(!is_numeric($page)) {
-        $page = w3rGetIdBySlug($page);
+        if ($page == 'frontpage' || $page == 'home') {
+            $page = w3rGetFrontpageId();
+        } else {
+            $page = w3rGetIdBySlug($page);
+        }
     }
 
     $data = [];
@@ -204,6 +212,28 @@ function w3r_get_modules($page = null) {
     }
 
     return $data;
+}
+
+/**
+ * Get frontpage ID
+ *
+ * @return mixed|void
+ * @throws Exception
+ */
+function w3rGetFrontpageId() {
+    $frontpageId = get_option( 'page_on_front' );
+
+    if ($frontpageId > 0) {
+        return $frontpageId;
+    }
+
+    $frontpageIdForBlog = get_option( 'page_for_posts' );
+
+    if ($frontpageIdForBlog) {
+        return $frontpageIdForBlog;
+    }
+
+    throw new \Exception("No frontpage or home ID found!");
 }
 
 /**

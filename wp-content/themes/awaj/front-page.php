@@ -4,7 +4,7 @@ use App\Theme\Helper as _;
 
 get_header();
 
-$modules = w3r_get_modules('66');
+$modules = w3r_get_modules('frontpage');
 
 if (count($modules) > 0) {
     foreach($modules as $moduleName => $moduleData) {
